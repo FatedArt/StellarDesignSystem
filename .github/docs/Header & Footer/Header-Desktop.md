@@ -82,11 +82,8 @@
 | **Logo** | Click | Navigate ke dashboard home | No visual change (external action) |
 | **"All Companies" Dropdown** | Click/Hover | Expand/collapse company selector | Arrow rotate, panel open below header |
 | **Search Field** | Focus | Input aktif, keyboard ready | Border highlight, backdrop-blur intensify |
-| **Search Field** | Input Type | Real-time filtering/suggestions | Optional loading spinner di field |
-| **Bell Icon** | Hover | Show tooltip "Notifications" | Icon scale slight, tooltip appear |
 | **Bell Icon** | Click | Open notification panel/drawer | Panel slide in from right |
-| **Bell Icon** | Notification Active | Visual indicator on icon | Badge/dot dengan notification color token |
-| **Avatar** | Hover | Pointer change | Subtle background tint |
+| **Bell Icon** | Notification Active | Visual indicator on icon | Badge/dot dengan notification color token | Click
 | **Avatar** | Click | Open user menu (Logout, Settings, etc.) | Menu panel appear below avatar |
 
 #### ✅ **DO:**
@@ -123,27 +120,6 @@
 - Change header height/padding saat scroll
 - Use transform yang affects z-index stacking context
 - Slide header out of viewport
-
----
-
-### Loading States
-- **Search Loading**: Spinner icon di kanan field, input tetap enabled
-- **Notification Loading**: Spinner overlay on bell icon, click tetap functional
-- **User Menu Loading**: Disabled state saat data fetch
-
-#### ✅ **DO:**
-- Show loading indicator (spinner) dalam element yang sedang loading
-- Keep input field enabled saat loading search (user bisa revise query)
-- Use proper disabled state styling untuk buttons/menus
-- Provide cancel/abort mechanism jika loading > 2 seconds
-- Show skeleton loading atau placeholder saat awaiting API response
-
-#### ❌ **DON'T:**
-- Disable entire header saat loading (keep user options available)
-- Show loading state > 5 seconds tanpa feedback
-- Remove interactive elements saat loading
-- Use multiple loading indicators untuk single action
-- Block user dari changing search query saat pending
 
 ---
 

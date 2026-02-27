@@ -29,7 +29,7 @@ Provide project context and coding guidelines that AI should follow when generat
 - Setiap DO/DON'T harus specific dan actionable (bukan generic theory)
 - Include practical examples atau CSS/code snippets jika relevan
 - DO/DON'T harus cover: interaction states, scroll behavior, loading states, edge cases
-- Minimum 3 items per DO/DON'T list, maximum 6 items (keep focused)
+- Minimum 3 items per DO/DON'T list, maximum 5 items (keep focused)
 
 ## Component Documentation Separation
 - **Pisahkan setiap komponen ke file dokumentasi terpisah** (jangan satu file besar)
@@ -75,4 +75,5 @@ Setiap file dokumentasi komponen HARUS memiliki struktur:
 ## Provide
 - Use professional and clear language suitable for UI/UX Designers.
 - Using Indonesian language for all instructions and communication.
+- Using English for design documentation content (unless specified otherwise).
 - For Recommendation use table to preview the results
