@@ -1,0 +1,73 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--stellar-main-8, 8px);
+  border: none;
+  border-radius: var(--stellar-main-4, 4px);
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease, opacity 0.15s ease;
+}
+
+.button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* Sizes */
+.sm { padding: 6px 12px; font-size: 0.75rem; }
+.md { padding: 10px 20px; font-size: 0.875rem; }
+.lg { padding: 14px 28px; font-size: 1rem; }
+
+/* Variants */
+.primary {
+  background: var(--stellar-main-crv-br-colors-primary-5);
+  color: #fff;
+}
+.primary:hover:not(:disabled) {
+  background: var(--stellar-main-crv-br-colors-primary-6);
+}
+
+.secondary {
+  background: transparent;
+  border: 1.5px solid var(--stellar-main-crv-br-colors-primary-5);
+  color: var(--stellar-main-crv-br-colors-primary-5);
+}
+.secondary:hover:not(:disabled) {
+  background: var(--stellar-main-crv-br-colors-primary-0);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--stellar-main-crv-br-colors-primary-5);
+}
+.ghost:hover:not(:disabled) {
+  background: var(--stellar-main-crv-br-colors-primary-0);
+}
+
+.danger {
+  background: #e53e3e;
+  color: #fff;
+}
+.danger:hover:not(:disabled) {
+  background: #c53030;
+}
+
+/* Loading state */
+.loading { pointer-events: none; }
+
+.spinner {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

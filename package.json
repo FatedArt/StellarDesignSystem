@@ -1,0 +1,22 @@
+{
+  "name": "stellar-design-system",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Stellar Design System – monorepo",
+  "scripts": {
+    "build": "pnpm -r run build",
+    "dev": "pnpm --parallel -r run dev",
+    "lint": "pnpm -r run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,json,md,mdx,css}\"",
+    "prestorybook": "pnpm tokens:build",
+    "storybook": "pnpm --filter @stellar/storybook run storybook",
+    "docs": "pnpm --filter @stellar/docs run start",
+    "tokens:build": "pnpm --filter @stellar/tokens run build",
+    "clean": "pnpm -r run clean"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  }
+}

@@ -1,0 +1,45 @@
+# Button
+
+Komponen interaksi dasar untuk aksi utama, sekunder, dan destruktif.
+
+## Kapan menggunakan
+
+- **Primary** — aksi utama pada halaman (maks. 1 per area)
+- **Secondary** — aksi alternatif, berdampingan dengan primary
+- **Ghost** — aksi minor atau di dalam komponen padat
+- **Danger** — aksi destruktif atau tidak dapat dibatalkan
+
+## Jangan lakukan
+
+- ❌ Jangan gunakan 2 button Primary berdampingan
+- ❌ Jangan gunakan label generik seperti "Klik di sini"
+- ❌ Jangan nonaktifkan button tanpa menjelaskan alasannya ke pengguna
+
+## Props
+
+| Prop | Tipe | Default | Keterangan |
+|---|---|---|---|
+| `variant` | `primary \| secondary \| ghost \| danger` | `primary` | Gaya visual |
+| `size` | `sm \| md \| lg` | `md` | Ukuran button |
+| `loading` | `boolean` | `false` | Tampilkan spinner |
+| `disabled` | `boolean` | `false` | Nonaktifkan button |
+
+## Contoh kode
+
+```tsx
+import { Button } from "@stellar/ui";
+
+<Button variant="primary" onClick={() => {}}>
+  Simpan
+</Button>
+
+<Button variant="secondary">Batal</Button>
+
+<Button variant="danger" loading>
+  Menghapus...
+</Button>
+```
+
+## Referensi Storybook
+
+Lihat semua variant dan states di [Storybook → Components/Button](https://stellar-storybook.vercel.app/?path=/docs/components-button--docs).

@@ -1,0 +1,39 @@
+---
+description: Auto-update CONTEXT.md when conversation context is getting long or when asked to summarize
+globs: "**/*"
+alwaysApply: false
+---
+
+# Context Summary Rule
+
+## Kapan update CONTEXT.md
+
+Update file `CONTEXT.md` di root repo dalam kondisi berikut:
+1. Pengguna meminta summary / ringkasan percakapan
+2. Estimasi konteks percakapan sudah panjang (banyak sesi, banyak keputusan baru)
+3. Ada keputusan teknis baru yang signifikan (tool baru, struktur berubah, komponen baru)
+4. Sebelum mengakhiri sesi panjang
+
+## Aturan update
+
+- **SELALU update file yang sudah ada** (`CONTEXT.md`) — jangan buat file baru
+- **Jangan hapus** bagian sebelumnya — cukup tambah / update section yang relevan
+- Update field `Terakhir diperbarui` di bagian Metadata
+- Tambahkan keputusan baru ke tabel "Keputusan Teknis yang Sudah Dibuat"
+- Tambahkan komponen baru ke section "Komponen yang Sudah Ada"
+- Pindahkan item backlog yang selesai ke ✅
+
+## Format penambahan sesi baru
+
+Saat menambah ringkasan sesi baru, tambahkan di bawah sesi terakhir di "Ringkasan Percakapan":
+
+```markdown
+### Sesi N — [Judul Singkat]
+
+[Ringkasan keputusan dan hal penting dari sesi ini]
+```
+
+## Cara pakai di New Agent
+
+Ingatkan pengguna bahwa mereka bisa membuka sesi baru dengan melampirkan file ini:
+> "Saya sudah update CONTEXT.md. Di sesi berikutnya, lampirkan file ini agar agent baru langsung paham konteks lengkap."
