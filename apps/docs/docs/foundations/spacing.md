@@ -18,6 +18,6 @@ Skala spacing Stellar menggunakan basis **4px**:
 ## Cara pakai
 
 ```css
-padding: var(--stellar-main-8);
-gap: var(--stellar-main-16);
+padding: var(--stellar-crv-8);
+gap: var(--stellar-crv-16);
 ```

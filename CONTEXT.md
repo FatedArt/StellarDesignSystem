@@ -184,7 +184,7 @@ StellarDesignSystem/
 - **Variants:** `primary`, `secondary`, `ghost`, `danger`
 - **Sizes:** `sm`, `md`, `lg`
 - **States:** default, hover, disabled, loading (spinner animasi)
-- **Token:** pakai CSS variables `--stellar-main-crv-br-colors-primary-*`
+- **Token:** pakai CSS variables `--stellar-crv-crv-br-colors-primary-*`
 - **Story:** `apps/storybook/stories/Button.stories.tsx` (semua variants + sizes)
 
 ---

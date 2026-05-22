@@ -34,7 +34,7 @@ jobs:
         run: pnpm tokens:build
 
       - name: Build docs
-        run: pnpm --filter @stellar/docs run build
+        run: pnpm --filter @fatedart/docs run build
 
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v25

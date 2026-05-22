@@ -1,7 +1,7 @@
 import type { Preview } from "@storybook/react";
 
 // Import design tokens CSS
-import "@stellar/tokens/dist/tokens.css";
+import "@fatedart/tokens/dist/tokens.css";
 
 const preview: Preview = {
   parameters: {

@@ -23,6 +23,8 @@ const sidebars: SidebarsConfig = {
       label: "Components",
       items: [
         "components/button",
+        "components/header-footer",
+        "components/input-field",
       ],
     },
     {

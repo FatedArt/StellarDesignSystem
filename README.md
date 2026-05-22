@@ -69,17 +69,47 @@ packages/ui  →  apps/storybook  →  produk
 
 | Package | Keterangan |
 |---|---|
-| `@stellar/tokens` | CSS variables + JS dari Figma tokens |
-| `@stellar/ui` | Komponen React + TypeScript |
-| `@stellar/icons` | Icon sebagai komponen React |
+| `@fatedart/tokens` | CSS variables + JS dari Figma tokens |
+| `@fatedart/ui` | Komponen React + TypeScript |
+| `@fatedart/icons` | Icon sebagai komponen React |
+
+## Branch strategy
+
+- `main` = branch production (dipakai developer sebagai source stabil)
+- `development` = branch eksplorasi/integrasi sebelum rilis ke `main`
+- Branch fitur/bug dibuat dari `development`, lalu merge ke `development`
+- Rilis production dilakukan lewat PR `development` -> `main`
+
+## Konsumsi package via GitHub Packages
+
+Tambahkan autentikasi di project konsumen:
+
+```bash
+echo "@fatedart:registry=https://npm.pkg.github.com" >> .npmrc
+echo "//npm.pkg.github.com/:_authToken=\${NODE_AUTH_TOKEN}" >> .npmrc
+```
+
+Lalu install:
+
+```bash
+pnpm add @fatedart/ui @fatedart/tokens
+```
+
+Gunakan di app:
+
+```tsx
+import "@fatedart/tokens/dist/tokens.css";
+import { Button } from "@fatedart/ui";
+```
 
 ## CI/CD
 
 | Workflow | Trigger | Output |
 |---|---|---|
-| `ci.yml` | Setiap PR | Lint + build semua packages |
+| `ci.yml` | Push ke `development`/`main` + PR ke `main` | Lint + build semua packages |
 | `deploy-storybook.yml` | Push ke `main` (ui/storybook berubah) | Chromatic deployment |
 | `deploy-docs.yml` | Push ke `main` (docs/tokens berubah) | Vercel deployment |
+| `release-packages.yml` | Push ke `main` (ui/tokens berubah) / manual trigger | Publish package ke GitHub Packages |
 
 ## Contributing
 

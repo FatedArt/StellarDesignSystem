@@ -5,6 +5,8 @@ build/
 .next/
 .docusaurus/
 storybook-static/
+apps/storybook/build-storybook.log
+
 *.local
 .env
 .env.*
