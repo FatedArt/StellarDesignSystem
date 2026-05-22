@@ -4,9 +4,9 @@
   width: 100%;
   max-width: 1712px;
   min-height: 61px;
-  border: 1px solid var(--stellar-crv-crv-df-colors-dark-4, #373a40);
-  background: var(--stellar-crv-crv-df-colors-dark-8, #1a1b1e);
-  color: var(--stellar-crv-crv-df-colors-onyx-0, #f8f9fa);
+  border: 1px solid var(--stellar-crv-df-colors-dark-4, #373a40);
+  background: var(--stellar-crv-df-colors-dark-8, #1a1b1e);
+  color: var(--stellar-crv-df-colors-onyx-0, #f8f9fa);
   padding: 8px 24px;
   display: flex;
   align-items: center;
@@ -17,7 +17,7 @@
 
 .mark,
 .markCompact {
-  color: var(--stellar-crv-crv-df-colors-onyx-0, #f8f9fa);
+  color: var(--stellar-crv-df-colors-onyx-0, #f8f9fa);
   font-weight: 700;
   letter-spacing: 0.08em;
 }
@@ -40,9 +40,9 @@
 .mobileSearchField {
   display: inline-flex;
   align-items: center;
-  border: 1px solid var(--stellar-crv-crv-df-colors-dark-4, #373a40);
-  background: color-mix(in srgb, var(--stellar-crv-crv-df-colors-dark-3, #5c5f66) 10%, transparent);
-  color: var(--stellar-crv-crv-df-colors-onyx-4, #868e96);
+  border: 1px solid var(--stellar-crv-df-colors-dark-4, #373a40);
+  background: color-mix(in srgb, var(--stellar-crv-df-colors-dark-3, #5c5f66) 10%, transparent);
+  color: var(--stellar-crv-df-colors-onyx-4, #868e96);
 }
 
 .searchField {
@@ -56,10 +56,10 @@
 .iconButton {
   width: 32px;
   height: 32px;
-  border: 1px solid var(--stellar-crv-crv-df-colors-dark-4, #373a40);
+  border: 1px solid var(--stellar-crv-df-colors-dark-4, #373a40);
   border-radius: 8px;
-  background: color-mix(in srgb, var(--stellar-crv-crv-df-colors-dark-3, #5c5f66) 10%, transparent);
-  color: var(--stellar-crv-crv-df-colors-onyx-0, #f8f9fa);
+  background: color-mix(in srgb, var(--stellar-crv-df-colors-dark-3, #5c5f66) 10%, transparent);
+  color: var(--stellar-crv-df-colors-onyx-0, #f8f9fa);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -69,7 +69,7 @@
 .verticalDivider {
   width: 1px;
   height: 28px;
-  background: var(--stellar-crv-crv-df-colors-dark-4, #373a40);
+  background: var(--stellar-crv-df-colors-dark-4, #373a40);
 }
 
 .account {
@@ -98,7 +98,7 @@
 .accountRole {
   font-size: 12px;
   line-height: 16px;
-  color: var(--stellar-crv-crv-df-colors-onyx-3, #adb5bd);
+  color: var(--stellar-crv-df-colors-onyx-3, #adb5bd);
 }
 
 .footer {
@@ -125,8 +125,8 @@
 
 .mobileHeaderTop,
 .mobileActionBar {
-  background: var(--stellar-crv-crv-df-colors-dark-8, #1a1b1e);
-  border: 1px solid var(--stellar-crv-crv-df-colors-dark-5, #495057);
+  background: var(--stellar-crv-df-colors-dark-8, #1a1b1e);
+  border: 1px solid var(--stellar-crv-df-colors-dark-5, #495057);
   padding: 12px;
   display: flex;
   align-items: center;
@@ -161,8 +161,8 @@
   min-height: 190px;
   box-sizing: border-box;
   padding: 32px;
-  background: var(--stellar-crv-crv-df-colors-dark-9, #101113);
-  color: var(--stellar-crv-crv-df-colors-onyx-0, #f8f9fa);
+  background: var(--stellar-crv-df-colors-dark-9, #101113);
+  color: var(--stellar-crv-df-colors-onyx-0, #f8f9fa);
   display: flex;
   flex-direction: column;
   gap: 32px;

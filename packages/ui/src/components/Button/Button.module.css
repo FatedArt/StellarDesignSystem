@@ -96,47 +96,47 @@
 
 /* Variants — matched to Figma semantic tokens */
 .primary {
-  --btn-bg: var(--stellar-crv-crv-br-colors-primary-6, #0f8696);
-  --btn-bg-hover: var(--stellar-crv-crv-br-colors-primary-7, #0b606b);
-  --btn-color: var(--stellar-crv-crv-df-colors-onyx-1, #f1f3f5);
-  --btn-color-hover: var(--stellar-crv-crv-df-colors-onyx-1, #f1f3f5);
+  --btn-bg: var(--stellar-crv-br-colors-primary-6, #0f8696);
+  --btn-bg-hover: var(--stellar-crv-br-colors-primary-7, #0b606b);
+  --btn-color: var(--stellar-crv-df-colors-onyx-1, #f1f3f5);
+  --btn-color-hover: var(--stellar-crv-df-colors-onyx-1, #f1f3f5);
 }
 
 .secondary {
-  --btn-bg: var(--stellar-crv-crv-df-colors-onyx-0, #f8f9fa);
-  --btn-bg-hover: var(--stellar-crv-crv-df-colors-onyx-1, #f1f3f5);
-  --btn-color: var(--stellar-crv-crv-br-colors-primary-6, #0f8696);
-  --btn-color-hover: var(--stellar-crv-crv-br-colors-primary-7, #0b606b);
+  --btn-bg: var(--stellar-crv-df-colors-onyx-0, #f8f9fa);
+  --btn-bg-hover: var(--stellar-crv-df-colors-onyx-1, #f1f3f5);
+  --btn-color: var(--stellar-crv-br-colors-primary-6, #0f8696);
+  --btn-color-hover: var(--stellar-crv-br-colors-primary-7, #0b606b);
 }
 
 .outline {
   --btn-bg: transparent;
-  --btn-bg-hover: var(--stellar-crv-crv-br-colors-primary-6, #0f8696);
-  --btn-color: var(--stellar-crv-crv-br-colors-primary-5, #14acc1);
-  --btn-color-hover: var(--stellar-crv-crv-br-colors-primary-0, #d0f2f7);
-  --btn-border-color: var(--stellar-crv-crv-br-colors-primary-5, #14acc1);
+  --btn-bg-hover: var(--stellar-crv-br-colors-primary-6, #0f8696);
+  --btn-color: var(--stellar-crv-br-colors-primary-5, #14acc1);
+  --btn-color-hover: var(--stellar-crv-br-colors-primary-0, #d0f2f7);
+  --btn-border-color: var(--stellar-crv-br-colors-primary-5, #14acc1);
   --btn-border-width: 1px;
 }
 
 .tonal {
-  --btn-bg: var(--stellar-crv-crv-df-colors-dark-5, #2c2e33);
-  --btn-bg-hover: var(--stellar-crv-crv-df-colors-dark-6, #25262b);
-  --btn-color: var(--stellar-crv-crv-df-colors-onyx-1, #f1f3f5);
-  --btn-color-hover: var(--stellar-crv-crv-br-colors-primary-5, #14acc1);
+  --btn-bg: var(--stellar-crv-df-colors-dark-5, #2c2e33);
+  --btn-bg-hover: var(--stellar-crv-df-colors-dark-6, #25262b);
+  --btn-color: var(--stellar-crv-df-colors-onyx-1, #f1f3f5);
+  --btn-color-hover: var(--stellar-crv-br-colors-primary-5, #14acc1);
 }
 
 .text {
   --btn-bg: transparent;
-  --btn-bg-hover: var(--stellar-crv-crv-df-colors-dark-6, #25262b);
-  --btn-color: var(--stellar-crv-crv-df-colors-onyx-1, #f1f3f5);
-  --btn-color-hover: var(--stellar-crv-crv-br-colors-primary-6, #0f8696);
+  --btn-bg-hover: var(--stellar-crv-df-colors-dark-6, #25262b);
+  --btn-color: var(--stellar-crv-df-colors-onyx-1, #f1f3f5);
+  --btn-color-hover: var(--stellar-crv-br-colors-primary-6, #0f8696);
 }
 
 .destruction {
-  --btn-bg: var(--stellar-crv-crv-br-colors-secondary-5, #e61b00);
-  --btn-bg-hover: var(--stellar-crv-crv-br-colors-secondary-6, #cc1700);
-  --btn-color: var(--stellar-crv-crv-df-colors-onyx-3, #dee2e6);
-  --btn-color-hover: var(--stellar-crv-crv-br-colors-secondary-0, #ffdfdb);
+  --btn-bg: var(--stellar-crv-br-colors-secondary-5, #e61b00);
+  --btn-bg-hover: var(--stellar-crv-br-colors-secondary-6, #cc1700);
+  --btn-color: var(--stellar-crv-df-colors-onyx-3, #dee2e6);
+  --btn-color-hover: var(--stellar-crv-br-colors-secondary-0, #ffdfdb);
 }
 
 .loading {

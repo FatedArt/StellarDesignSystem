@@ -4,7 +4,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 const config: Config = {
   title: "Stellar Design System",
   tagline: "Komponen, token, dan guidelines untuk produk Stellar",
-  favicon: "img/favicon.ico",
+  favicon: "img/favicon.svg",
 
   url: "https://stellar-ds.vercel.app",
   baseUrl: "/",
@@ -43,6 +43,7 @@ const config: Config = {
       logo: {
         alt: "Stellar Design System Logo",
         src: "img/logo.svg",
+        href: "/docs/getting-started",
       },
       items: [
         {

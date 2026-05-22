@@ -15,7 +15,7 @@ Gunakan selalu token semantik, bukan nilai hardcoded:
 
 ```css
 /* ✅ Benar */
-color: var(--stellar-crv-crv-br-colors-primary-5);
+color: var(--stellar-crv-br-colors-primary-5);
 
 /* ❌ Hindari */
 color: #3B82F6;
