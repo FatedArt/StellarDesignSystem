@@ -1,4 +1,4 @@
-# @stellar/icons
+# @fatedart/icons
 
 Package icon untuk Stellar Design System.
 

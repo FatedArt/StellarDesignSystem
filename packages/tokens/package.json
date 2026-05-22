@@ -1,9 +1,13 @@
 {
-  "name": "@stellar/tokens",
+  "name": "@fatedart/tokens",
   "version": "0.0.1",
   "description": "Design tokens for Stellar Design System",
   "main": "dist/tokens.css",
   "files": ["dist"],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "restricted"
+  },
   "scripts": {
     "build": "style-dictionary build --config sd.config.mjs",
     "dev": "style-dictionary build --config sd.config.mjs --watch",

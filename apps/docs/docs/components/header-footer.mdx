@@ -1,0 +1,47 @@
+# Header & Footer
+
+Komponen layout untuk area navigasi atas dan informasi bawah halaman.
+
+## Komponen yang tersedia
+
+- `Header` — versi desktop untuk bar atas.
+- `Footer` — versi desktop untuk bar bawah.
+- `MobileHeader` — versi header mobile.
+- `MobileFooter` — versi footer mobile.
+
+## Props utama
+
+### Header
+
+| Prop | Tipe | Default | Keterangan |
+|---|---|---|---|
+| `showTenant` | `boolean` | `true` | Menampilkan teks role pengguna. |
+| `username` | `string` | `"Jacob Collier"` | Nama akun pada area profile. |
+| `role` | `string` | `"Analyst"` | Role atau tenant pengguna. |
+
+### Footer
+
+| Prop | Tipe | Default | Keterangan |
+|---|---|---|---|
+| `productName` | `string` | `"IntelliBron Threat Intel [VERSION]"` | Nama produk pada footer. |
+| `copyrightText` | `string` | `"Copyright © 2024-present ITSEC Asia. All Rights Reserved"` | Teks hak cipta. |
+
+## Contoh penggunaan
+
+```tsx
+import { Header, Footer, MobileHeader, MobileFooter } from "@fatedart/ui";
+
+<Header username="Jane Doe" role="Security Analyst" />
+
+<Footer
+  productName="Stellar Analyst"
+  copyrightText="Copyright © 2026 FatedArt. All Rights Reserved"
+/>
+
+<MobileHeader />
+<MobileFooter />
+```
+
+## Referensi Storybook
+
+Lihat variasi desktop dan mobile di `Components/HeaderFooter` pada Storybook.

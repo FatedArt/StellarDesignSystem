@@ -1,5 +1,5 @@
 {
-  "name": "@stellar/docs",
+  "name": "@fatedart/docs",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -10,6 +10,7 @@
     "clean": "rm -rf build .docusaurus"
   },
   "dependencies": {
+    "@fatedart/tokens": "workspace:*",
     "@docusaurus/core": "^3.5.0",
     "@docusaurus/preset-classic": "^3.5.0",
     "@mdx-js/react": "^3.0.0",

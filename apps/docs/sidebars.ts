@@ -14,8 +14,6 @@ const sidebars: SidebarsConfig = {
         "foundations/color",
         "foundations/typography",
         "foundations/spacing",
-        "foundations/elevation",
-        "foundations/accessibility",
       ],
     },
     {
@@ -23,12 +21,9 @@ const sidebars: SidebarsConfig = {
       label: "Components",
       items: [
         "components/button",
+        "components/header-footer",
+        "components/input-field",
       ],
-    },
-    {
-      type: "category",
-      label: "Patterns",
-      items: [],
     },
     {
       type: "doc",

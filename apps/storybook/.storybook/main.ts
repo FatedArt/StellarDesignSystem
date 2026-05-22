@@ -26,8 +26,8 @@ const config: StorybookConfig = {
 
   async viteFinal(config) {
     const aliases = {
-      "@stellar/ui": path.resolve(configDir, "../../../packages/ui/src"),
-      "@stellar/icons": path.resolve(configDir, "../../../packages/icons/src"),
+      "@fatedart/ui": path.resolve(configDir, "../../../packages/ui/src"),
+      "@fatedart/icons": path.resolve(configDir, "../../../packages/icons/src"),
     };
     const existing = config.resolve?.alias;
     if (Array.isArray(existing)) {

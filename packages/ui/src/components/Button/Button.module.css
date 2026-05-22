@@ -1,14 +1,44 @@
 .button {
+  --btn-bg: transparent;
+  --btn-bg-hover: transparent;
+  --btn-color: inherit;
+  --btn-color-hover: inherit;
+  --btn-border-color: transparent;
+  --btn-border-width: 0;
+  --btn-padding-y: 12px;
+  --btn-padding-x: 16px;
+  --btn-gap: 4px;
+  --btn-radius: 8px;
+  --btn-font-size: 14px;
+  --btn-font-weight: 500;
+  --btn-line-height: 18px;
+  --btn-letter-spacing: 0.008em;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--stellar-main-8, 8px);
-  border: none;
-  border-radius: var(--stellar-main-4, 4px);
-  font-family: inherit;
-  font-weight: 500;
+  gap: var(--btn-gap);
+  padding: var(--btn-padding-y) var(--btn-padding-x);
+  border: var(--btn-border-width) solid var(--btn-border-color);
+  border-radius: var(--btn-radius);
+  background: var(--btn-bg);
+  color: var(--btn-color);
+  font-family: var(--stellar-crv-body, "DM Sans", sans-serif);
+  font-size: var(--btn-font-size);
+  font-weight: var(--btn-font-weight);
+  line-height: var(--btn-line-height);
+  letter-spacing: var(--btn-letter-spacing);
   cursor: pointer;
-  transition: background 0.15s ease, opacity 0.15s ease;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    border-color 0.15s ease,
+    opacity 0.15s ease;
+}
+
+.button:hover:not(:disabled) {
+  background: var(--btn-bg-hover);
+  color: var(--btn-color-hover);
 }
 
 .button:disabled {
@@ -16,47 +46,102 @@
   cursor: not-allowed;
 }
 
-/* Sizes */
-.sm { padding: 6px 12px; font-size: 0.75rem; }
-.md { padding: 10px 20px; font-size: 0.875rem; }
-.lg { padding: 14px 28px; font-size: 1rem; }
-
-/* Variants */
-.primary {
-  background: var(--stellar-main-crv-br-colors-primary-5);
-  color: #fff;
+/* Sizes — matched to Figma Button Component */
+.xs {
+  --btn-padding-y: 4px;
+  --btn-padding-x: 8px;
+  --btn-gap: 4px;
+  --btn-radius: 8px;
+  --btn-font-size: 12px;
+  --btn-line-height: 16px;
 }
-.primary:hover:not(:disabled) {
-  background: var(--stellar-main-crv-br-colors-primary-6);
+
+.sm {
+  --btn-padding-y: 8px;
+  --btn-padding-x: 12px;
+  --btn-gap: 4px;
+  --btn-radius: 8px;
+  --btn-font-size: 12px;
+  --btn-line-height: 16px;
+}
+
+.md {
+  --btn-padding-y: 12px;
+  --btn-padding-x: 16px;
+  --btn-gap: 4px;
+  --btn-radius: 8px;
+  --btn-font-size: 14px;
+  --btn-line-height: 18px;
+}
+
+.lg {
+  --btn-padding-y: 12px;
+  --btn-padding-x: 20px;
+  --btn-gap: 8px;
+  --btn-radius: 12px;
+  --btn-font-size: 16px;
+  --btn-font-weight: 600;
+  --btn-line-height: 21px;
+}
+
+.xl {
+  --btn-padding-y: 12px;
+  --btn-padding-x: 24px;
+  --btn-gap: 8px;
+  --btn-radius: 12px;
+  --btn-font-size: 20px;
+  --btn-font-weight: 600;
+  --btn-line-height: 26px;
+}
+
+/* Variants — matched to Figma semantic tokens */
+.primary {
+  --btn-bg: var(--stellar-crv-br-colors-primary-6, #0f8696);
+  --btn-bg-hover: var(--stellar-crv-br-colors-primary-7, #0b606b);
+  --btn-color: var(--stellar-crv-df-colors-onyx-1, #f1f3f5);
+  --btn-color-hover: var(--stellar-crv-df-colors-onyx-1, #f1f3f5);
 }
 
 .secondary {
-  background: transparent;
-  border: 1.5px solid var(--stellar-main-crv-br-colors-primary-5);
-  color: var(--stellar-main-crv-br-colors-primary-5);
-}
-.secondary:hover:not(:disabled) {
-  background: var(--stellar-main-crv-br-colors-primary-0);
+  --btn-bg: var(--stellar-crv-df-colors-onyx-0, #f8f9fa);
+  --btn-bg-hover: var(--stellar-crv-df-colors-onyx-1, #f1f3f5);
+  --btn-color: var(--stellar-crv-br-colors-primary-6, #0f8696);
+  --btn-color-hover: var(--stellar-crv-br-colors-primary-7, #0b606b);
 }
 
-.ghost {
-  background: transparent;
-  color: var(--stellar-main-crv-br-colors-primary-5);
-}
-.ghost:hover:not(:disabled) {
-  background: var(--stellar-main-crv-br-colors-primary-0);
-}
-
-.danger {
-  background: #e53e3e;
-  color: #fff;
-}
-.danger:hover:not(:disabled) {
-  background: #c53030;
+.outline {
+  --btn-bg: transparent;
+  --btn-bg-hover: var(--stellar-crv-br-colors-primary-6, #0f8696);
+  --btn-color: var(--stellar-crv-br-colors-primary-5, #14acc1);
+  --btn-color-hover: var(--stellar-crv-br-colors-primary-0, #d0f2f7);
+  --btn-border-color: var(--stellar-crv-br-colors-primary-5, #14acc1);
+  --btn-border-width: 1px;
 }
 
-/* Loading state */
-.loading { pointer-events: none; }
+.tonal {
+  --btn-bg: var(--stellar-crv-df-colors-dark-5, #2c2e33);
+  --btn-bg-hover: var(--stellar-crv-df-colors-dark-6, #25262b);
+  --btn-color: var(--stellar-crv-df-colors-onyx-1, #f1f3f5);
+  --btn-color-hover: var(--stellar-crv-br-colors-primary-5, #14acc1);
+}
+
+.text {
+  --btn-bg: transparent;
+  --btn-bg-hover: var(--stellar-crv-df-colors-dark-6, #25262b);
+  --btn-color: var(--stellar-crv-df-colors-onyx-1, #f1f3f5);
+  --btn-color-hover: var(--stellar-crv-br-colors-primary-6, #0f8696);
+}
+
+.destruction {
+  --btn-bg: var(--stellar-crv-br-colors-secondary-5, #e61b00);
+  --btn-bg-hover: var(--stellar-crv-br-colors-secondary-6, #cc1700);
+  --btn-color: var(--stellar-crv-df-colors-onyx-3, #dee2e6);
+  --btn-color-hover: var(--stellar-crv-br-colors-secondary-0, #ffdfdb);
+}
+
+.loading {
+  pointer-events: none;
+}
 
 .spinner {
   display: inline-block;
@@ -69,5 +154,7 @@
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
