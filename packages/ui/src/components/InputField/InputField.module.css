@@ -1,0 +1,114 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.label {
+  font-family: var(--stellar-crv-body, "DM Sans", sans-serif);
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--stellar-crv-crv-df-colors-onyx-1, #f1f3f5);
+}
+
+.required {
+  color: var(--stellar-crv-crv-br-colors-secondary-5, #e61b00);
+  margin-left: 4px;
+}
+
+.control {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid var(--input-border, var(--stellar-crv-crv-df-colors-dark-4, #373a40));
+  border-radius: var(--input-radius, 8px);
+  background: var(--input-bg, var(--stellar-crv-crv-df-colors-dark-8, #141517));
+  color: var(--input-text, var(--stellar-crv-crv-df-colors-onyx-0, #f8f9fa));
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.control:focus-within {
+  border-color: var(--input-focus, var(--stellar-crv-crv-br-colors-primary-5, #14acc1));
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--stellar-crv-crv-br-colors-primary-5, #14acc1) 24%, transparent);
+}
+
+.input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: inherit;
+  font-family: var(--stellar-crv-body, "DM Sans", sans-serif);
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.input::placeholder {
+  color: var(--stellar-crv-crv-df-colors-onyx-4, #868e96);
+}
+
+.prefix,
+.suffix {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--stellar-crv-crv-df-colors-onyx-4, #868e96);
+  padding: 0 12px;
+  font-size: 14px;
+}
+
+.helperText {
+  font-family: var(--stellar-crv-body, "DM Sans", sans-serif);
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--input-helper, var(--stellar-crv-crv-df-colors-onyx-3, #adb5bd));
+}
+
+.md {
+  min-height: 45px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.md .input {
+  padding: 12px 16px;
+}
+
+.sm {
+  min-height: 36px;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.sm .input {
+  padding: 8px 12px;
+}
+
+.lg {
+  min-height: 52px;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.lg .input {
+  padding: 14px 16px;
+}
+
+.disabled {
+  --input-bg: var(--stellar-crv-crv-df-colors-dark-7, #1a1b1e);
+  --input-border: var(--stellar-crv-crv-df-colors-dark-6, #25262b);
+  --input-text: var(--stellar-crv-crv-df-colors-onyx-5, #adb5bd);
+  cursor: not-allowed;
+  opacity: 0.75;
+}
+
+.disabled .input {
+  cursor: not-allowed;
+}
+
+.error {
+  --input-border: var(--stellar-crv-crv-br-colors-secondary-5, #e61b00);
+  --input-focus: var(--stellar-crv-crv-br-colors-secondary-6, #cc1700);
+  --input-helper: var(--stellar-crv-crv-br-colors-secondary-4, #ff1e00);
+}

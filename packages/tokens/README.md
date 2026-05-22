@@ -1,4 +1,4 @@
-# @stellar/tokens
+# @fatedart/tokens
 
 Design tokens untuk Stellar Design System, di-generate dari `tokens.json` (Tokens Studio for Figma).
 
@@ -22,11 +22,11 @@ Output tersedia di `dist/`:
 ## Pakai di project lain
 
 ```css
-@import '@stellar/tokens/dist/tokens.css';
+@import '@fatedart/tokens/dist/tokens.css';
 ```
 
 ```ts
-import { colorPrimary0 } from '@stellar/tokens/dist/tokens';
+import { colorPrimary0 } from '@fatedart/tokens/dist/tokens';
 ```
 
 ## Update token dari Figma

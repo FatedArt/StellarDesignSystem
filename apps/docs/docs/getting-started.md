@@ -7,7 +7,7 @@ Selamat datang di **Stellar Design System** — sistem desain yang menghubungkan
 ### 1. Install package
 
 ```bash
-pnpm add @stellar/ui @stellar/tokens
+pnpm add @fatedart/ui @fatedart/tokens
 ```
 
 ### 2. Import tokens CSS
@@ -15,13 +15,13 @@ pnpm add @stellar/ui @stellar/tokens
 Di file root app Anda (mis. `main.tsx` atau `_app.tsx`):
 
 ```ts
-import "@stellar/tokens/dist/tokens.css";
+import "@fatedart/tokens/dist/tokens.css";
 ```
 
 ### 3. Gunakan komponen
 
 ```tsx
-import { Button } from "@stellar/ui";
+import { Button } from "@fatedart/ui";
 
 export default function App() {
   return <Button variant="primary">Halo Stellar!</Button>;
@@ -32,9 +32,9 @@ export default function App() {
 
 | Package | Isi |
 |---|---|
-| `@stellar/tokens` | CSS variables + JS tokens dari Figma |
-| `@stellar/ui` | Komponen React |
-| `@stellar/icons` | Icon set sebagai komponen React |
+| `@fatedart/tokens` | CSS variables + JS tokens dari Figma |
+| `@fatedart/ui` | Komponen React |
+| `@fatedart/icons` | Icon set sebagai komponen React |
 
 ## Resources
 

@@ -1,17 +1,18 @@
 {
-  "name": "@stellar/storybook",
+  "name": "@fatedart/storybook",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "build": "storybook build -o storybook-static",
     "build-storybook": "storybook build -o storybook-static",
-    "clean": "rm -rf storybook-static"
+    "clean": "rm -rf storybook-static",
+    "chromatic": "npx chromatic --project-token=chpt_c395669049ee0e8 --storybook-base-dir apps/storybook"
   },
   "dependencies": {
-    "@stellar/icons": "workspace:*",
-    "@stellar/tokens": "workspace:*",
-    "@stellar/ui": "workspace:*"
+    "@fatedart/icons": "workspace:*",
+    "@fatedart/tokens": "workspace:*",
+    "@fatedart/ui": "workspace:*"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.0.0",

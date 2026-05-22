@@ -9,9 +9,9 @@
     "lint": "pnpm -r run lint",
     "format": "prettier --write \"**/*.{ts,tsx,json,md,mdx,css}\"",
     "prestorybook": "pnpm tokens:build",
-    "storybook": "pnpm --filter @stellar/storybook run storybook",
-    "docs": "pnpm --filter @stellar/docs run start",
-    "tokens:build": "pnpm --filter @stellar/tokens run build",
+    "storybook": "pnpm --filter @fatedart/storybook run storybook",
+    "docs": "pnpm --filter @fatedart/docs run start",
+    "tokens:build": "pnpm --filter @fatedart/tokens run build",
     "clean": "pnpm -r run clean"
   },
   "packageManager": "pnpm@9.0.0",

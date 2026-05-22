@@ -1,0 +1,48 @@
+# Input Field
+
+Komponen input teks untuk form dengan state normal, error, disabled, dan adornment.
+
+## Kapan dipakai
+
+- Isian data teks seperti email, username, domain, atau kata kunci pencarian.
+- Form yang butuh helper text atau validasi error.
+
+## Props utama
+
+| Prop | Tipe | Default | Keterangan |
+|---|---|---|---|
+| `label` | `string` | `undefined` | Label di atas field. |
+| `helperText` | `string` | `undefined` | Bantuan singkat di bawah field. |
+| `errorText` | `string` | `undefined` | Pesan error; jika ada akan override helper text. |
+| `size` | `"sm" \| "md" \| "lg"` | `"md"` | Ukuran tinggi input. |
+| `startAdornment` | `ReactNode` | `undefined` | Elemen di sisi kiri input (ikon/prefix). |
+| `endAdornment` | `ReactNode` | `undefined` | Elemen di sisi kanan input (suffix). |
+| `requiredMark` | `boolean` | `false` | Menampilkan tanda `*` pada label. |
+
+## Contoh kode
+
+```tsx
+import { InputField } from "@fatedart/ui";
+
+<InputField
+  label="Email"
+  placeholder="name@company.com"
+  helperText="Use your work email"
+/>
+
+<InputField
+  label="Search"
+  startAdornment="🔎"
+  placeholder="Search threat intel..."
+/>
+
+<InputField
+  label="Email"
+  value="invalid-email"
+  errorText="Please enter a valid email address"
+/>
+```
+
+## Referensi Storybook
+
+Lihat semua varian pada menu `Components/Input Field` di Storybook.

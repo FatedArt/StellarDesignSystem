@@ -1,0 +1,88 @@
+name: Release Packages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "packages/ui/**"
+      - "packages/tokens/**"
+      - "pnpm-lock.yaml"
+      - ".github/workflows/release-packages.yml"
+  workflow_dispatch:
+
+jobs:
+  publish:
+    name: Publish to GitHub Packages
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "pnpm"
+          registry-url: "https://npm.pkg.github.com"
+
+      - name: Validate package scope for GitHub Packages
+        id: scope_check
+        env:
+          REPO_OWNER: ${{ github.repository_owner }}
+        run: |
+          OWNER_SCOPE="@$(echo "$REPO_OWNER" | tr '[:upper:]' '[:lower:]')"
+          UI_NAME=$(node -p "require('./packages/ui/package.json').name")
+          TOKENS_NAME=$(node -p "require('./packages/tokens/package.json').name")
+          if [[ "$UI_NAME" != ${OWNER_SCOPE}/* || "$TOKENS_NAME" != ${OWNER_SCOPE}/* ]]; then
+            echo "GitHub Packages npm scope must match repository owner."
+            echo "Expected scope: ${OWNER_SCOPE}"
+            echo "Current package names: ${UI_NAME}, ${TOKENS_NAME}"
+            echo "Update package names or transfer repository ownership before publishing."
+            echo "publish_enabled=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "publish_enabled=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build tokens
+        run: pnpm --filter @fatedart/tokens run build
+
+      - name: Build UI
+        run: pnpm --filter @fatedart/ui run build
+
+      - name: Publish @fatedart/tokens if version is new
+        if: steps.scope_check.outputs.publish_enabled == 'true'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PKG="@fatedart/tokens"
+          VER=$(node -p "require('./packages/tokens/package.json').version")
+          if npm view "${PKG}@${VER}" --registry=https://npm.pkg.github.com > /dev/null 2>&1; then
+            echo "Skip ${PKG}@${VER} (already published)"
+          else
+            pnpm --filter @fatedart/tokens publish --no-git-checks --registry https://npm.pkg.github.com
+          fi
+
+      - name: Publish @fatedart/ui if version is new
+        if: steps.scope_check.outputs.publish_enabled == 'true'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PKG="@fatedart/ui"
+          VER=$(node -p "require('./packages/ui/package.json').version")
+          if npm view "${PKG}@${VER}" --registry=https://npm.pkg.github.com > /dev/null 2>&1; then
+            echo "Skip ${PKG}@${VER} (already published)"
+          else
+            pnpm --filter @fatedart/ui publish --no-git-checks --registry https://npm.pkg.github.com
+          fi

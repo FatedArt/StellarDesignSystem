@@ -1,0 +1,21 @@
+.headerFooterPage {
+  background: #0f1012;
+  min-height: 100vh;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.headerFooterSpacer {
+  height: 24px;
+}
+
+.headerFooterPageMobile {
+  display: flex;
+  justify-content: center;
+}
+
+.headerFooterMobileStack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
