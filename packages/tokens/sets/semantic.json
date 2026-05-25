@@ -2,125 +2,125 @@
   "color": {
     "action": {
       "primary": {
-        "value": "{brand.primary.700}",
+        "value": "{corvus.primary.700}",
         "type": "color"
       },
       "primaryHover": {
-        "value": "{brand.primary.800}",
+        "value": "{corvus.primary.800}",
         "type": "color"
       },
       "primarySubtle": {
-        "value": "{brand.primary.100}",
+        "value": "{corvus.primary.100}",
         "type": "color"
       },
       "primaryStrong": {
-        "value": "{brand.primary.600}",
+        "value": "{corvus.primary.600}",
         "type": "color"
       },
       "secondary": {
-        "value": "{neutral.light.100}",
+        "value": "{corvus.neutral.light.100}",
         "type": "color"
       },
       "secondaryHover": {
-        "value": "{neutral.light.200}",
+        "value": "{corvus.neutral.light.200}",
         "type": "color"
       },
       "danger": {
-        "value": "{brand.secondary.600}",
+        "value": "{corvus.secondary.600}",
         "type": "color"
       },
       "dangerHover": {
-        "value": "{brand.secondary.700}",
+        "value": "{corvus.secondary.700}",
         "type": "color"
       },
       "dangerSubtle": {
-        "value": "{brand.secondary.100}",
+        "value": "{corvus.secondary.100}",
         "type": "color"
       },
       "dangerStrong": {
-        "value": "{brand.secondary.500}",
+        "value": "{corvus.secondary.500}",
         "type": "color"
       }
     },
     "text": {
       "onPrimary": {
-        "value": "{neutral.light.200}",
+        "value": "{corvus.neutral.light.200}",
         "type": "color"
       },
       "primary": {
-        "value": "{brand.primary.700}",
+        "value": "{corvus.primary.700}",
         "type": "color"
       },
       "tertiary": {
-        "value": "{brand.primary.600}",
+        "value": "{corvus.primary.600}",
         "type": "color"
       },
       "base": {
-        "value": "{neutral.light.800}",
+        "value": "{corvus.neutral.light.800}",
         "type": "color"
       },
       "muted": {
-        "value": "{neutral.light.500}",
+        "value": "{corvus.neutral.light.500}",
         "type": "color"
       },
       "subtle": {
-        "value": "{neutral.light.400}",
+        "value": "{corvus.neutral.light.400}",
         "type": "color"
       },
       "onSurface": {
-        "value": "{neutral.light.100}",
+        "value": "{corvus.neutral.light.100}",
         "type": "color"
       },
       "disabled": {
-        "value": "{neutral.light.600}",
+        "value": "{corvus.neutral.light.600}",
         "type": "color"
       }
     },
     "background": {
       "default": {
-        "value": "{neutral.light.100}",
+        "value": "{corvus.neutral.light.100}",
         "type": "color"
       },
       "subtle": {
-        "value": "{neutral.dark.600}",
+        "value": "{corvus.neutral.dark.600}",
         "type": "color"
       },
       "strong": {
-        "value": "{neutral.dark.700}",
+        "value": "{corvus.neutral.dark.700}",
         "type": "color"
       },
       "surface": {
-        "value": "{neutral.dark.900}",
+        "value": "{corvus.neutral.dark.900}",
         "type": "color"
       },
       "elevated": {
-        "value": "{neutral.dark.800}",
+        "value": "{corvus.neutral.dark.800}",
         "type": "color"
       },
       "inverse": {
-        "value": "{neutral.dark.1000}",
+        "value": "{corvus.neutral.dark.1000}",
         "type": "color"
       }
     },
     "border": {
       "default": {
-        "value": "{neutral.dark.500}",
+        "value": "{corvus.neutral.dark.500}",
         "type": "color"
       },
       "subtle": {
-        "value": "{neutral.dark.600}",
+        "value": "{corvus.neutral.dark.600}",
         "type": "color"
       },
       "focus": {
-        "value": "{brand.primary.600}",
+        "value": "{corvus.primary.600}",
         "type": "color"
       },
       "error": {
-        "value": "{brand.secondary.600}",
+        "value": "{corvus.secondary.600}",
         "type": "color"
       },
       "errorFocus": {
-        "value": "{brand.secondary.700}",
+        "value": "{corvus.secondary.700}",
         "type": "color"
       }
     },

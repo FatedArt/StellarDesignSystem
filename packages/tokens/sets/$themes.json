@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "id": "corvus",
+    "name": "Corvus",
+    "selectedTokenSets": {
+      "core": "enabled",
+      "semantic": "enabled",
+      "typography": "enabled",
+      "components": "enabled"
+    }
+  },
+  {
+    "id": "prime",
+    "name": "Prime",
+    "selectedTokenSets": {
+      "core": "enabled",
+      "semantic": "enabled",
+      "typography": "enabled",
+      "components": "enabled"
+    }
+  }
+]
