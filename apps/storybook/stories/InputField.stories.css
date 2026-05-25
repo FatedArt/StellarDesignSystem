@@ -1,6 +1,13 @@
+.inputFieldCanvas {
+  width: 360px;
+  padding: var(--stellar-core-spacing-2xl);
+  border-radius: var(--stellar-components-input-field-radius);
+  background: var(--stellar-semantic-color-background-inverse);
+}
+
 .inputFieldSizes {
   width: 360px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: var(--stellar-components-input-field-gap);
 }

@@ -1,0 +1,101 @@
+/**
+ * Typography utilities mapped to typography tokens (Figma text styles).
+ */
+
+.bodyMediumXsmall {
+  font-family: var(--stellar-typography-crv-body-medium-xsmall-font-family), "DM Sans", sans-serif;
+  font-weight: var(--stellar-typography-crv-body-medium-xsmall-font-weight);
+  font-size: calc(var(--stellar-core-sizes-default-2px) * 6);
+  line-height: calc(var(--stellar-typography-crv-body-medium-xsmall-line-height) * 1px);
+  letter-spacing: var(--stellar-typography-crv-body-medium-xsmall-letter-spacing);
+}
+
+.bodyMediumSmall {
+  font-family: var(--stellar-typography-crv-body-medium-small-font-family), "DM Sans", sans-serif;
+  font-weight: var(--stellar-typography-crv-body-medium-small-font-weight);
+  font-size: calc(var(--stellar-core-sizes-default-2px) * 7);
+  line-height: calc(var(--stellar-typography-crv-body-medium-small-line-height) * 1px);
+  letter-spacing: var(--stellar-typography-crv-body-medium-small-letter-spacing);
+}
+
+.bodyMediumMedium {
+  font-family: var(--stellar-typography-crv-body-medium-medium-font-family), "DM Sans", sans-serif;
+  font-weight: var(--stellar-typography-crv-body-medium-medium-font-weight);
+  font-size: calc(var(--stellar-core-sizes-default-2px) * 8);
+  line-height: calc(var(--stellar-typography-crv-body-medium-medium-line-height) * 1px);
+  letter-spacing: var(--stellar-typography-crv-body-medium-medium-letter-spacing);
+}
+
+.bodyMediumXlarge {
+  font-family: var(--stellar-typography-crv-body-medium-xlarge-font-family), "DM Sans", sans-serif;
+  font-weight: var(--stellar-typography-crv-body-medium-xlarge-font-weight);
+  font-size: calc(var(--stellar-core-sizes-default-2px) * 10);
+  line-height: calc(var(--stellar-typography-crv-body-medium-xlarge-line-height) * 1px);
+  letter-spacing: var(--stellar-typography-crv-body-medium-xlarge-letter-spacing);
+}
+
+.bodySemiboldMedium {
+  font-family: var(--stellar-typography-crv-body-semibold-medium-font-family), "DM Sans", sans-serif;
+  font-weight: var(--stellar-typography-crv-body-semibold-medium-font-weight);
+  font-size: calc(var(--stellar-core-sizes-default-2px) * 8);
+  line-height: calc(var(--stellar-typography-crv-body-semibold-medium-line-height) * 1px);
+  letter-spacing: var(--stellar-typography-crv-body-semibold-medium-letter-spacing);
+}
+
+.bodySemiboldSmall {
+  font-family: var(--stellar-typography-crv-body-semibold-small-font-family), "DM Sans", sans-serif;
+  font-weight: var(--stellar-typography-crv-body-semibold-small-font-weight);
+  font-size: calc(var(--stellar-core-sizes-default-2px) * 7);
+  line-height: calc(var(--stellar-typography-crv-body-semibold-small-line-height) * 1px);
+  letter-spacing: var(--stellar-typography-crv-body-semibold-small-letter-spacing);
+}
+
+.bodySemiboldXlarge {
+  font-family: var(--stellar-typography-crv-body-semibold-xlarge-font-family), "DM Sans", sans-serif;
+  font-weight: var(--stellar-typography-crv-body-semibold-xlarge-font-weight);
+  font-size: calc(var(--stellar-core-sizes-default-2px) * 10);
+  line-height: calc(var(--stellar-typography-crv-body-semibold-xlarge-line-height) * 1px);
+  letter-spacing: var(--stellar-typography-crv-body-semibold-xlarge-letter-spacing);
+}
+
+.bodyRegularXsmall {
+  font-family: var(--stellar-typography-crv-body-regular-xsmall-font-family), "DM Sans", sans-serif;
+  font-weight: var(--stellar-typography-crv-body-regular-xsmall-font-weight);
+  font-size: calc(var(--stellar-core-sizes-default-2px) * 6);
+  line-height: calc(var(--stellar-typography-crv-body-regular-xsmall-line-height) * 1px);
+  letter-spacing: var(--stellar-typography-crv-body-regular-xsmall-letter-spacing);
+}
+
+.bodyRegularSmall {
+  font-family: var(--stellar-typography-crv-body-regular-small-font-family), "DM Sans", sans-serif;
+  font-weight: var(--stellar-typography-crv-body-regular-small-font-weight);
+  font-size: calc(var(--stellar-core-sizes-default-2px) * 7);
+  line-height: calc(var(--stellar-typography-crv-body-regular-small-line-height) * 1px);
+  letter-spacing: var(--stellar-typography-crv-body-regular-small-letter-spacing);
+}
+
+.bodyRegularMedium {
+  font-family: var(--stellar-typography-crv-body-regular-medium-font-family), "DM Sans", sans-serif;
+  font-weight: var(--stellar-typography-crv-body-regular-medium-font-weight);
+  font-size: calc(var(--stellar-core-sizes-default-2px) * 8);
+  line-height: calc(var(--stellar-typography-crv-body-regular-medium-line-height) * 1px);
+  letter-spacing: var(--stellar-typography-crv-body-regular-medium-letter-spacing);
+}
+
+.uppercaseLarge {
+  font-family: var(--stellar-typography-crv-uppercase-large-font-family), "DM Sans", sans-serif;
+  font-weight: var(--stellar-typography-crv-uppercase-large-font-weight);
+  font-size: calc(var(--stellar-core-sizes-default-2px) * 9);
+  line-height: calc(var(--stellar-typography-crv-uppercase-large-line-height) * 1px);
+  letter-spacing: var(--stellar-typography-crv-uppercase-large-letter-spacing);
+  text-transform: var(--stellar-core-text-case-uppercase);
+}
+
+.uppercaseSmall {
+  font-family: var(--stellar-typography-crv-uppercase-small-font-family), "DM Sans", sans-serif;
+  font-weight: var(--stellar-typography-crv-uppercase-small-font-weight);
+  font-size: calc(var(--stellar-core-sizes-default-2px) * 7);
+  line-height: calc(var(--stellar-typography-crv-uppercase-small-line-height) * 1px);
+  letter-spacing: var(--stellar-typography-crv-uppercase-small-letter-spacing);
+  text-transform: var(--stellar-core-text-case-uppercase);
+}

@@ -1,0 +1,5 @@
+.darkSurface {
+  padding: var(--stellar-core-spacing-lg);
+  border-radius: var(--stellar-components-button-radius);
+  background: var(--stellar-semantic-color-background-surface);
+}

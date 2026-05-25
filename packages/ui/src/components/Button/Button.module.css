@@ -5,14 +5,10 @@
   --btn-color-hover: inherit;
   --btn-border-color: transparent;
   --btn-border-width: 0;
-  --btn-padding-y: 12px;
-  --btn-padding-x: 16px;
-  --btn-gap: 4px;
-  --btn-radius: 8px;
-  --btn-font-size: 14px;
-  --btn-font-weight: 500;
-  --btn-line-height: 18px;
-  --btn-letter-spacing: 0.008em;
+  --btn-padding-y: var(--stellar-components-button-size-md-padding-y);
+  --btn-padding-x: var(--stellar-components-button-size-md-padding-x);
+  --btn-gap: var(--stellar-components-button-size-md-gap);
+  --btn-radius: var(--stellar-components-button-size-md-radius);
 
   display: inline-flex;
   align-items: center;
@@ -23,11 +19,6 @@
   border-radius: var(--btn-radius);
   background: var(--btn-bg);
   color: var(--btn-color);
-  font-family: var(--stellar-crv-body, "DM Sans", sans-serif);
-  font-size: var(--btn-font-size);
-  font-weight: var(--btn-font-weight);
-  line-height: var(--btn-line-height);
-  letter-spacing: var(--btn-letter-spacing);
   cursor: pointer;
   transition:
     background 0.15s ease,
@@ -42,101 +33,92 @@
 }
 
 .button:disabled {
-  opacity: 0.45;
+  opacity: var(--stellar-components-button-opacity-disabled);
   cursor: not-allowed;
 }
 
-/* Sizes — matched to Figma Button Component */
 .xs {
-  --btn-padding-y: 4px;
-  --btn-padding-x: 8px;
-  --btn-gap: 4px;
-  --btn-radius: 8px;
-  --btn-font-size: 12px;
-  --btn-line-height: 16px;
+  composes: bodyMediumXsmall from "../../styles/typography.module.css";
+  --btn-padding-y: var(--stellar-components-button-size-xs-padding-y);
+  --btn-padding-x: var(--stellar-components-button-size-xs-padding-x);
+  --btn-gap: var(--stellar-components-button-size-xs-gap);
+  --btn-radius: var(--stellar-components-button-size-xs-radius);
 }
 
 .sm {
-  --btn-padding-y: 8px;
-  --btn-padding-x: 12px;
-  --btn-gap: 4px;
-  --btn-radius: 8px;
-  --btn-font-size: 12px;
-  --btn-line-height: 16px;
+  composes: bodyMediumXsmall from "../../styles/typography.module.css";
+  --btn-padding-y: var(--stellar-components-button-size-sm-padding-y);
+  --btn-padding-x: var(--stellar-components-button-size-sm-padding-x);
+  --btn-gap: var(--stellar-components-button-size-sm-gap);
+  --btn-radius: var(--stellar-components-button-size-sm-radius);
 }
 
 .md {
-  --btn-padding-y: 12px;
-  --btn-padding-x: 16px;
-  --btn-gap: 4px;
-  --btn-radius: 8px;
-  --btn-font-size: 14px;
-  --btn-line-height: 18px;
+  composes: bodyMediumSmall from "../../styles/typography.module.css";
+  --btn-padding-y: var(--stellar-components-button-size-md-padding-y);
+  --btn-padding-x: var(--stellar-components-button-size-md-padding-x);
+  --btn-gap: var(--stellar-components-button-size-md-gap);
+  --btn-radius: var(--stellar-components-button-size-md-radius);
 }
 
 .lg {
-  --btn-padding-y: 12px;
-  --btn-padding-x: 20px;
-  --btn-gap: 8px;
-  --btn-radius: 12px;
-  --btn-font-size: 16px;
-  --btn-font-weight: 600;
-  --btn-line-height: 21px;
+  composes: bodySemiboldMedium from "../../styles/typography.module.css";
+  --btn-padding-y: var(--stellar-components-button-size-lg-padding-y);
+  --btn-padding-x: var(--stellar-components-button-size-lg-padding-x);
+  --btn-gap: var(--stellar-components-button-size-lg-gap);
+  --btn-radius: var(--stellar-components-button-size-lg-radius);
 }
 
 .xl {
-  --btn-padding-y: 12px;
-  --btn-padding-x: 24px;
-  --btn-gap: 8px;
-  --btn-radius: 12px;
-  --btn-font-size: 20px;
-  --btn-font-weight: 600;
-  --btn-line-height: 26px;
+  composes: bodySemiboldXlarge from "../../styles/typography.module.css";
+  --btn-padding-y: var(--stellar-components-button-size-xl-padding-y);
+  --btn-padding-x: var(--stellar-components-button-size-xl-padding-x);
+  --btn-gap: var(--stellar-components-button-size-xl-gap);
+  --btn-radius: var(--stellar-components-button-size-xl-radius);
 }
 
-/* Variants — matched to Figma semantic tokens */
 .primary {
-  --btn-bg: var(--stellar-crv-br-colors-primary-6, #0f8696);
-  --btn-bg-hover: var(--stellar-crv-br-colors-primary-7, #0b606b);
-  --btn-color: var(--stellar-crv-df-colors-onyx-1, #f1f3f5);
-  --btn-color-hover: var(--stellar-crv-df-colors-onyx-1, #f1f3f5);
+  --btn-bg: var(--stellar-components-button-variant-primary-background-default);
+  --btn-bg-hover: var(--stellar-components-button-variant-primary-background-hover);
+  --btn-color: var(--stellar-components-button-variant-primary-color-default);
+  --btn-color-hover: var(--stellar-components-button-variant-primary-color-hover);
 }
 
 .secondary {
-  --btn-bg: var(--stellar-crv-df-colors-onyx-0, #f8f9fa);
-  --btn-bg-hover: var(--stellar-crv-df-colors-onyx-1, #f1f3f5);
-  --btn-color: var(--stellar-crv-br-colors-primary-6, #0f8696);
-  --btn-color-hover: var(--stellar-crv-br-colors-primary-7, #0b606b);
+  --btn-bg: var(--stellar-components-button-variant-secondary-background-default);
+  --btn-bg-hover: var(--stellar-components-button-variant-secondary-background-hover);
+  --btn-color: var(--stellar-components-button-variant-secondary-color-default);
+  --btn-color-hover: var(--stellar-components-button-variant-secondary-color-hover);
 }
 
 .outline {
-  --btn-bg: transparent;
-  --btn-bg-hover: var(--stellar-crv-br-colors-primary-6, #0f8696);
-  --btn-color: var(--stellar-crv-br-colors-primary-5, #14acc1);
-  --btn-color-hover: var(--stellar-crv-br-colors-primary-0, #d0f2f7);
-  --btn-border-color: var(--stellar-crv-br-colors-primary-5, #14acc1);
+  --btn-bg: var(--stellar-components-button-variant-outline-background-default);
+  --btn-bg-hover: var(--stellar-components-button-variant-outline-background-hover);
+  --btn-color: var(--stellar-components-button-variant-outline-color-default);
+  --btn-color-hover: var(--stellar-components-button-variant-outline-color-hover);
+  --btn-border-color: var(--stellar-components-button-variant-outline-border-default);
   --btn-border-width: 1px;
 }
 
 .tonal {
-  --btn-bg: var(--stellar-crv-df-colors-dark-5, #2c2e33);
-  --btn-bg-hover: var(--stellar-crv-df-colors-dark-6, #25262b);
-  --btn-color: var(--stellar-crv-df-colors-onyx-1, #f1f3f5);
-  --btn-color-hover: var(--stellar-crv-br-colors-primary-5, #14acc1);
+  --btn-bg: var(--stellar-components-button-variant-tonal-background-default);
+  --btn-bg-hover: var(--stellar-components-button-variant-tonal-background-hover);
+  --btn-color: var(--stellar-components-button-variant-tonal-color-default);
+  --btn-color-hover: var(--stellar-components-button-variant-tonal-color-hover);
 }
 
 .text {
-  --btn-bg: transparent;
-  --btn-bg-hover: var(--stellar-crv-df-colors-dark-6, #25262b);
-  --btn-color: var(--stellar-crv-df-colors-onyx-1, #f1f3f5);
-  --btn-color-hover: var(--stellar-crv-br-colors-primary-6, #0f8696);
+  --btn-bg: var(--stellar-components-button-variant-text-background-default);
+  --btn-bg-hover: var(--stellar-components-button-variant-text-background-hover);
+  --btn-color: var(--stellar-components-button-variant-text-color-default);
+  --btn-color-hover: var(--stellar-components-button-variant-text-color-hover);
 }
 
 .destruction {
-  --btn-bg: var(--stellar-crv-br-colors-secondary-5, #e61b00);
-  --btn-bg-hover: var(--stellar-crv-br-colors-secondary-6, #cc1700);
-  --btn-color: var(--stellar-crv-df-colors-onyx-3, #dee2e6);
-  --btn-color-hover: var(--stellar-crv-br-colors-secondary-0, #ffdfdb);
+  --btn-bg: var(--stellar-components-button-variant-destruction-background-default);
+  --btn-bg-hover: var(--stellar-components-button-variant-destruction-background-hover);
+  --btn-color: var(--stellar-components-button-variant-destruction-color-default);
+  --btn-color-hover: var(--stellar-components-button-variant-destruction-color-hover);
 }
 
 .loading {

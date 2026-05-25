@@ -3,63 +3,67 @@
   box-sizing: border-box;
   width: 100%;
   max-width: 1712px;
-  min-height: 61px;
-  border: 1px solid var(--stellar-crv-df-colors-dark-4, #373a40);
-  background: var(--stellar-crv-df-colors-dark-8, #1a1b1e);
-  color: var(--stellar-crv-df-colors-onyx-0, #f8f9fa);
-  padding: 8px 24px;
+  min-height: var(--stellar-components-header-footer-header-min-height);
+  border: 1px solid var(--stellar-components-header-footer-header-border);
+  background: var(--stellar-components-header-footer-header-background);
+  color: var(--stellar-components-header-footer-header-color);
+  padding: var(--stellar-components-header-footer-header-padding-y)
+    var(--stellar-components-header-footer-header-padding-x);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
-  font-family: var(--stellar-crv-body, "DM Sans", sans-serif);
-}
-
-.mark,
-.markCompact {
-  color: var(--stellar-crv-df-colors-onyx-0, #f8f9fa);
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  gap: var(--stellar-components-header-footer-header-gap);
 }
 
 .mark {
-  font-size: 18px;
+  composes: uppercaseLarge from "../../styles/typography.module.css";
+  color: var(--stellar-components-header-footer-header-color);
 }
 
 .markCompact {
-  font-size: 14px;
+  composes: uppercaseSmall from "../../styles/typography.module.css";
+  color: var(--stellar-components-header-footer-header-color);
 }
 
 .headerContent {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: var(--stellar-components-header-footer-header-content-gap);
 }
 
 .searchField,
 .mobileSearchField {
   display: inline-flex;
   align-items: center;
-  border: 1px solid var(--stellar-crv-df-colors-dark-4, #373a40);
-  background: color-mix(in srgb, var(--stellar-crv-df-colors-dark-3, #5c5f66) 10%, transparent);
-  color: var(--stellar-crv-df-colors-onyx-4, #868e96);
+  border: 1px solid var(--stellar-components-header-footer-header-search-border);
+  background: color-mix(
+    in srgb,
+    var(--stellar-components-header-footer-header-search-background) 10%,
+    transparent
+  );
+  color: var(--stellar-components-header-footer-header-search-color);
 }
 
 .searchField {
-  width: 240px;
-  height: 45px;
-  padding: 12px 16px;
-  border-radius: 8px;
-  font-size: 14px;
+  composes: bodyRegularSmall from "../../styles/typography.module.css";
+  width: var(--stellar-components-header-footer-header-search-width);
+  height: var(--stellar-components-header-footer-header-search-height);
+  padding: var(--stellar-components-header-footer-header-search-padding-y)
+    var(--stellar-components-header-footer-header-search-padding-x);
+  border-radius: var(--stellar-components-header-footer-header-search-radius);
 }
 
 .iconButton {
-  width: 32px;
-  height: 32px;
-  border: 1px solid var(--stellar-crv-df-colors-dark-4, #373a40);
-  border-radius: 8px;
-  background: color-mix(in srgb, var(--stellar-crv-df-colors-dark-3, #5c5f66) 10%, transparent);
-  color: var(--stellar-crv-df-colors-onyx-0, #f8f9fa);
+  width: var(--stellar-components-header-footer-header-icon-size);
+  height: var(--stellar-components-header-footer-header-icon-size);
+  border: 1px solid var(--stellar-components-header-footer-header-icon-border);
+  border-radius: var(--stellar-components-header-footer-header-icon-radius);
+  background: color-mix(
+    in srgb,
+    var(--stellar-components-header-footer-header-icon-background) 10%,
+    transparent
+  );
+  color: var(--stellar-components-header-footer-header-icon-color);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -68,21 +72,25 @@
 
 .verticalDivider {
   width: 1px;
-  height: 28px;
-  background: var(--stellar-crv-df-colors-dark-4, #373a40);
+  height: var(--stellar-components-header-footer-header-divider-height);
+  background: var(--stellar-components-header-footer-header-divider-color);
 }
 
 .account {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: var(--stellar-components-header-footer-header-account-gap);
 }
 
 .avatar {
-  width: 32px;
-  height: 32px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #0f8696, #14acc1);
+  width: var(--stellar-components-header-footer-header-avatar-size);
+  height: var(--stellar-components-header-footer-header-avatar-size);
+  border-radius: var(--stellar-core-radius-xl);
+  background: linear-gradient(
+    135deg,
+    var(--stellar-semantic-color-action-primary),
+    var(--stellar-semantic-color-action-primary-strong)
+  );
 }
 
 .accountInfo {
@@ -91,88 +99,86 @@
 }
 
 .accountName {
-  font-size: 14px;
-  line-height: 18px;
+  composes: bodySemiboldSmall from "../../styles/typography.module.css";
 }
 
 .accountRole {
-  font-size: 12px;
-  line-height: 16px;
-  color: var(--stellar-crv-df-colors-onyx-3, #adb5bd);
+  composes: bodyRegularXsmall from "../../styles/typography.module.css";
+  color: var(--stellar-components-header-footer-header-account-role-color);
 }
 
 .footer {
-  min-height: 59px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  min-height: var(--stellar-components-header-footer-footer-min-height);
+  padding-top: var(--stellar-components-header-footer-footer-padding-top);
+  padding-bottom: var(--stellar-components-header-footer-footer-padding-bottom);
+  border-color: var(--stellar-components-header-footer-footer-border);
+  background: var(--stellar-components-header-footer-footer-background);
+  color: var(--stellar-components-header-footer-footer-color);
 }
 
 .footerContent {
+  composes: bodyRegularSmall from "../../styles/typography.module.css";
   display: flex;
   align-items: center;
-  gap: 23px;
+  gap: var(--stellar-components-header-footer-footer-gap);
   flex-wrap: wrap;
-  font-size: 14px;
-  line-height: 18px;
 }
 
 .mobileHeader {
-  width: 320px;
+  width: var(--stellar-components-header-footer-mobile-width);
   display: flex;
   flex-direction: column;
-  font-family: var(--stellar-crv-body, "DM Sans", sans-serif);
 }
 
 .mobileHeaderTop,
 .mobileActionBar {
-  background: var(--stellar-crv-df-colors-dark-8, #1a1b1e);
-  border: 1px solid var(--stellar-crv-df-colors-dark-5, #495057);
-  padding: 12px;
+  background: var(--stellar-components-header-footer-mobile-background);
+  border: 1px solid var(--stellar-components-header-footer-mobile-border);
+  padding: var(--stellar-components-header-footer-mobile-padding);
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .mobileHeaderTop {
-  min-height: 55px;
+  min-height: var(--stellar-components-header-footer-mobile-header-top-min-height);
 }
 
 .mobileActionBar {
   border-top: none;
-  min-height: 52px;
-  gap: 8px;
+  min-height: var(--stellar-components-header-footer-mobile-action-bar-min-height);
+  gap: var(--stellar-components-header-footer-mobile-action-gap);
 }
 
 .mobileSearchField {
-  width: 192px;
-  height: 32px;
-  padding: 8px 12px;
-  border-radius: 8px;
-  font-size: 12px;
+  composes: bodyRegularXsmall from "../../styles/typography.module.css";
+  width: var(--stellar-components-header-footer-mobile-search-width);
+  height: var(--stellar-components-header-footer-mobile-search-height);
+  padding: var(--stellar-components-header-footer-mobile-search-padding-y)
+    var(--stellar-components-header-footer-mobile-search-padding-x);
+  border-radius: var(--stellar-components-header-footer-header-search-radius);
 }
 
 .mobileActionButtons {
   display: flex;
-  gap: 8px;
+  gap: var(--stellar-components-header-footer-mobile-action-gap);
 }
 
 .mobileFooter {
-  width: 320px;
-  min-height: 190px;
+  width: var(--stellar-components-header-footer-mobile-width);
+  min-height: var(--stellar-components-header-footer-mobile-footer-min-height);
   box-sizing: border-box;
-  padding: 32px;
-  background: var(--stellar-crv-df-colors-dark-9, #101113);
-  color: var(--stellar-crv-df-colors-onyx-0, #f8f9fa);
+  padding: var(--stellar-components-header-footer-mobile-footer-padding);
+  background: var(--stellar-components-header-footer-mobile-footer-background);
+  color: var(--stellar-components-header-footer-mobile-color);
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  font-family: var(--stellar-crv-body, "DM Sans", sans-serif);
+  gap: var(--stellar-components-header-footer-mobile-footer-gap);
 }
 
 .mobileFooterContent {
+  composes: bodyRegularSmall from "../../styles/typography.module.css";
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  font-size: 14px;
-  line-height: 18px;
+  gap: var(--stellar-components-header-footer-mobile-footer-content-gap);
 }

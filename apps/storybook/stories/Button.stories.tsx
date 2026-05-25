@@ -1,6 +1,7 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Button } from "@fatedart/ui";
+import "./Button.stories.css";
 
 const meta: Meta<typeof Button> = {
   title: "Components/Button",
@@ -51,13 +52,7 @@ export const Outline: Story = {
 
 export const Tonal: Story = {
   render: ({ children, ...args }) => (
-    <div
-      style={{
-        padding: 16,
-        borderRadius: 8,
-        background: "#1a1b1e",
-      }}
-    >
+    <div className="darkSurface">
       <Button {...args}>{children}</Button>
     </div>
   ),
@@ -66,13 +61,7 @@ export const Tonal: Story = {
 
 export const Text: Story = {
   render: ({ children, ...args }) => (
-    <div
-      style={{
-        padding: 16,
-        borderRadius: 8,
-        background: "#1a1b1e",
-      }}
-    >
+    <div className="darkSurface">
       <Button {...args}>{children}</Button>
     </div>
   ),
@@ -100,17 +89,7 @@ export const AllVariants: Story = {
         <Button variant="outline">Outline</Button>
         <Button variant="destruction">Destruction</Button>
       </div>
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          gap: 12,
-          alignItems: "center",
-          padding: 16,
-          borderRadius: 8,
-          background: "#1a1b1e",
-        }}
-      >
+      <div className="darkSurface" style={{ display: "flex", flexWrap: "wrap", gap: 12, alignItems: "center" }}>
         <Button variant="tonal">Tonal</Button>
         <Button variant="text">Text</Button>
       </div>

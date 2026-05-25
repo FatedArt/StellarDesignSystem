@@ -1,36 +1,39 @@
 .field {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: var(--stellar-components-input-field-gap);
   width: 100%;
 }
 
 .label {
-  font-family: var(--stellar-crv-body, "DM Sans", sans-serif);
-  font-size: 14px;
-  line-height: 18px;
-  color: var(--stellar-crv-df-colors-onyx-1, #f1f3f5);
+  composes: bodyMediumSmall from "../../styles/typography.module.css";
+  color: var(--stellar-components-input-field-color-label);
 }
 
 .required {
-  color: var(--stellar-crv-br-colors-secondary-5, #e61b00);
-  margin-left: 4px;
+  color: var(--stellar-components-input-field-color-required);
+  margin-left: var(--stellar-core-spacing-xs);
 }
 
 .control {
   display: inline-flex;
   align-items: center;
   width: 100%;
-  border: 1px solid var(--input-border, var(--stellar-crv-df-colors-dark-4, #373a40));
-  border-radius: var(--input-radius, 8px);
-  background: var(--input-bg, var(--stellar-crv-df-colors-dark-8, #141517));
-  color: var(--input-text, var(--stellar-crv-df-colors-onyx-0, #f8f9fa));
+  border: 1px solid var(--input-border, var(--stellar-components-input-field-color-border-default));
+  border-radius: var(--input-radius, var(--stellar-components-input-field-radius));
+  background: var(--input-bg, var(--stellar-components-input-field-color-background-default));
+  color: var(--input-text, var(--stellar-components-input-field-color-text-default));
   transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 
 .control:focus-within {
-  border-color: var(--input-focus, var(--stellar-crv-br-colors-primary-5, #14acc1));
-  box-shadow: 0 0 0 2px color-mix(in srgb, var(--stellar-crv-br-colors-primary-5, #14acc1) 24%, transparent);
+  border-color: var(--input-focus, var(--stellar-components-input-field-color-border-focus));
+  box-shadow: 0 0 0 var(--stellar-components-input-field-focus-ring)
+    color-mix(
+      in srgb,
+      var(--stellar-components-input-field-color-border-focus) 24%,
+      transparent
+    );
 }
 
 .input {
@@ -39,13 +42,12 @@
   outline: none;
   background: transparent;
   color: inherit;
-  font-family: var(--stellar-crv-body, "DM Sans", sans-serif);
-  font-size: inherit;
-  line-height: inherit;
+  font: inherit;
+  letter-spacing: inherit;
 }
 
 .input::placeholder {
-  color: var(--stellar-crv-df-colors-onyx-4, #868e96);
+  color: var(--stellar-components-input-field-color-text-placeholder);
 }
 
 .prefix,
@@ -53,54 +55,52 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: var(--stellar-crv-df-colors-onyx-4, #868e96);
-  padding: 0 12px;
-  font-size: 14px;
+  color: var(--stellar-components-input-field-color-affix);
+  padding: 0 var(--stellar-core-spacing-md);
+  font: inherit;
 }
 
 .helperText {
-  font-family: var(--stellar-crv-body, "DM Sans", sans-serif);
-  font-size: 12px;
-  line-height: 16px;
-  color: var(--input-helper, var(--stellar-crv-df-colors-onyx-3, #adb5bd));
+  composes: bodyRegularXsmall from "../../styles/typography.module.css";
+  color: var(--input-helper, var(--stellar-components-input-field-color-helper-default));
 }
 
 .md {
-  min-height: 45px;
-  font-size: 14px;
-  line-height: 18px;
+  composes: bodyRegularSmall from "../../styles/typography.module.css";
+  min-height: var(--stellar-components-input-field-size-md-min-height);
 }
 
 .md .input {
-  padding: 12px 16px;
+  padding: var(--stellar-components-input-field-size-md-padding-y)
+    var(--stellar-components-input-field-size-md-padding-x);
 }
 
 .sm {
-  min-height: 36px;
-  font-size: 12px;
-  line-height: 16px;
+  composes: bodyRegularXsmall from "../../styles/typography.module.css";
+  min-height: var(--stellar-components-input-field-size-sm-min-height);
 }
 
 .sm .input {
-  padding: 8px 12px;
+  padding: var(--stellar-components-input-field-size-sm-padding-y)
+    var(--stellar-components-input-field-size-sm-padding-x);
 }
 
 .lg {
-  min-height: 52px;
-  font-size: 16px;
-  line-height: 21px;
+  composes: bodyRegularMedium from "../../styles/typography.module.css";
+  min-height: var(--stellar-components-input-field-size-lg-min-height);
 }
 
 .lg .input {
-  padding: 14px 16px;
+  padding: var(--stellar-components-input-field-size-lg-padding-y)
+    var(--stellar-components-input-field-size-lg-padding-x);
 }
 
 .disabled {
-  --input-bg: var(--stellar-crv-df-colors-dark-7, #1a1b1e);
-  --input-border: var(--stellar-crv-df-colors-dark-6, #25262b);
-  --input-text: var(--stellar-crv-df-colors-onyx-5, #adb5bd);
+  --input-bg: var(--stellar-components-input-field-color-background-disabled);
+  --input-border: var(--stellar-semantic-color-border-default);
+  --input-text: var(--stellar-components-input-field-color-text-disabled);
   cursor: not-allowed;
-  opacity: 0.75;
+  opacity: var(--stellar-semantic-opacity-field-disabled);
 }
 
 .disabled .input {
@@ -108,7 +108,7 @@
 }
 
 .error {
-  --input-border: var(--stellar-crv-br-colors-secondary-5, #e61b00);
-  --input-focus: var(--stellar-crv-br-colors-secondary-6, #cc1700);
-  --input-helper: var(--stellar-crv-br-colors-secondary-4, #ff1e00);
+  --input-border: var(--stellar-components-input-field-color-border-error);
+  --input-focus: var(--stellar-semantic-color-border-error-focus);
+  --input-helper: var(--stellar-components-input-field-color-helper-error);
 }

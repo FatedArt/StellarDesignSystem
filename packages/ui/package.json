@@ -18,7 +18,7 @@
     "access": "restricted"
   },
   "scripts": {
-    "build": "tsc --project tsconfig.build.json && cp \"src/components/Button/Button.module.css\" \"dist/components/Button/Button.module.css\" && cp \"src/components/HeaderFooter/HeaderFooter.module.css\" \"dist/components/HeaderFooter/HeaderFooter.module.css\" && cp \"src/components/InputField/InputField.module.css\" \"dist/components/InputField/InputField.module.css\"",
+    "build": "tsc --project tsconfig.build.json && mkdir -p dist/styles && cp \"src/styles/typography.module.css\" \"dist/styles/typography.module.css\" && cp \"src/components/Button/Button.module.css\" \"dist/components/Button/Button.module.css\" && cp \"src/components/HeaderFooter/HeaderFooter.module.css\" \"dist/components/HeaderFooter/HeaderFooter.module.css\" && cp \"src/components/InputField/InputField.module.css\" \"dist/components/InputField/InputField.module.css\"",
     "dev": "tsc --project tsconfig.build.json --watch",
     "lint": "eslint src --ext .ts,.tsx",
     "clean": "rm -rf dist"

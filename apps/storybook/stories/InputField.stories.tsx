@@ -3,6 +3,12 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { InputField } from "@fatedart/ui";
 import "./InputField.stories.css";
 
+const withCanvas = (Story: React.ComponentType) => (
+  <div className="inputFieldCanvas">
+    <Story />
+  </div>
+);
+
 const meta: Meta<typeof InputField> = {
   title: "Components/Input Field",
   component: InputField,
@@ -25,6 +31,7 @@ const meta: Meta<typeof InputField> = {
     disabled: { control: "boolean" },
     required: { control: "boolean" },
   },
+  decorators: [withCanvas],
 };
 
 export default meta;

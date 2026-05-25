@@ -11,14 +11,17 @@ Token warna tersedia dalam dua kelompok utama:
 
 ## Cara pakai
 
-Gunakan selalu token semantik, bukan nilai hardcoded:
+Gunakan token **semantic** atau **components**, bukan nilai hardcoded:
 
 ```css
-/* ✅ Benar */
-color: var(--stellar-crv-br-colors-primary-5);
+/* ✅ Benar — semantic */
+color: var(--stellar-semantic-color-action-primary);
+
+/* ✅ Benar — component */
+background: var(--stellar-components-button-variant-primary-background-default);
 
 /* ❌ Hindari */
-color: #3B82F6;
+color: #14ACC1;
 ```
 
 ## Aksesibilitas
