@@ -69,7 +69,7 @@ Order from `$metadata.json`: `core` → `semantic` → `typography` → `compone
 
 | Set | Top-level keys |
 |-----|----------------|
-| core | `spacing`, `radius`, `brColors`, `dfColors`, `fontSizes`, … |
+| core | `spacing`, `radius`, `brand`, `neutral`, `green`, `teal`, `fontSizes`, … |
 | semantic | `color`, `opacity` |
 | typography | `crv` |
 | components | `button`, `inputField`, `headerFooter` |

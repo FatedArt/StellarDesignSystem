@@ -14,6 +14,8 @@
     "dev": "node scripts/ensure-tokens-for-build.mjs && style-dictionary build --config sd.config.mjs --watch",
     "sync:split": "node scripts/sync-from-tokens-json.mjs",
     "sync:merge": "node scripts/merge-token-sets.mjs",
+    "migrate:scale": "node scripts/migrate-color-scale-atlassian.mjs",
+    "migrate:hierarchy": "node scripts/migrate-color-hierarchy-atlassian.mjs",
     "split": "node scripts/split-token-sets.mjs",
     "merge": "node scripts/merge-token-sets.mjs",
     "clean": "rm -rf dist"

@@ -474,7 +474,7 @@
         "type": "color"
       },
       "searchBackground": {
-        "value": "{dfColors.dark.s3}",
+        "value": "{neutral.dark.400}",
         "type": "color"
       },
       "searchColor": {
@@ -494,7 +494,7 @@
         "type": "color"
       },
       "iconBackground": {
-        "value": "{dfColors.dark.s3}",
+        "value": "{neutral.dark.400}",
         "type": "color"
       },
       "iconColor": {

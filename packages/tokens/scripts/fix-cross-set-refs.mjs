@@ -1,33 +1,23 @@
 /**
  * Normalize Token Studio multi-file references so they render without "red dots":
- * 1. Rename numeric color scale keys (0-9) → s0-s9 in core
+ * 1. Rename legacy color scale keys (0–9, s0–s9) → Atlassian 100–1000 in core palettes
  * 2. Strip ALL set-name prefixes ({core.*, semantic.*, typography.*, components.*})
- *    from references in every set. Token Studio resolves cross-set refs by path
- *    alone; the merge step re-adds `{setName.path}` prefixes for Style Dictionary.
- * 3. Update legacy numeric color refs to the s0-s9 form.
+ * 3. Normalize legacy color refs in alias strings to 100–1000
  */
 
 import { readFileSync, writeFileSync, readdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { COLOR_PALETTE_ROOTS } from "./lib/color-hierarchy.mjs";
+import {
+  normalizeColorScaleRefs,
+  renameColorScaleKeys,
+} from "./lib/color-scale.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..", "sets");
 
 const SET_NAMES = ["core", "semantic", "typography", "components"];
 const STRIP_PREFIX_RE = new RegExp(`\\{(${SET_NAMES.join("|")})\\.`, "g");
-
-function renameColorScaleKeys(obj) {
-  if (!obj || typeof obj !== "object" || Array.isArray(obj)) return obj;
-  const next = {};
-  for (const [key, value] of Object.entries(obj)) {
-    const newKey = /^[0-9]$/.test(key) ? `s${key}` : key;
-    next[newKey] =
-      value && typeof value === "object" && "value" in value && "type" in value
-        ? value
-        : renameColorScaleKeys(value);
-  }
-  return next;
-}
 
 function stripAllSetPrefixes(value) {
   if (typeof value === "string") {
@@ -44,29 +34,17 @@ function stripAllSetPrefixes(value) {
   return value;
 }
 
-function updateColorRefs(value) {
-  if (typeof value === "string") {
-    return value.replace(
-      /((?:brColors|dfColors)(?:\.[\w-]+)*\.)([0-9])(?=\})/g,
-      "$1s$2",
-    );
+function normalizeCoreColorPalettes(core) {
+  for (const group of COLOR_PALETTE_ROOTS) {
+    if (!core[group]) continue;
+    core[group] = renameColorScaleKeys(core[group]);
   }
-  if (Array.isArray(value)) return value.map(updateColorRefs);
-  if (value && typeof value === "object") {
-    const next = {};
-    for (const [key, entry] of Object.entries(value)) {
-      next[key] = updateColorRefs(entry);
-    }
-    return next;
-  }
-  return value;
+  return core;
 }
 
 const corePath = join(root, "core.json");
 const core = JSON.parse(readFileSync(corePath, "utf8"));
-core.brColors = renameColorScaleKeys(core.brColors);
-core.dfColors = renameColorScaleKeys(core.dfColors);
-writeFileSync(corePath, `${JSON.stringify(core, null, 2)}\n`);
+writeFileSync(corePath, `${JSON.stringify(normalizeCoreColorPalettes(core), null, 2)}\n`);
 
 const setFiles = readdirSync(root).filter(
   (file) => file.endsWith(".json") && !file.startsWith("$"),
@@ -76,10 +54,10 @@ for (const file of setFiles) {
   const path = join(root, file);
   let data = JSON.parse(readFileSync(path, "utf8"));
   data = stripAllSetPrefixes(data);
-  data = updateColorRefs(data);
+  data = normalizeColorScaleRefs(data);
   writeFileSync(path, `${JSON.stringify(data, null, 2)}\n`);
 }
 
 console.log(
-  `Normalized refs in ${setFiles.join(", ")} (stripped set prefixes, fixed s0-s9 keys)`,
+  `Normalized refs in ${setFiles.join(", ")} (stripped set prefixes, Atlassian palettes)`,
 );

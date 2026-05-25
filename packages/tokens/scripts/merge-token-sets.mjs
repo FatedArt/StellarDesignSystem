@@ -2,7 +2,7 @@
  * Merge sets/*.json → tokens.json (for Style Dictionary build).
  *
  * Token Studio multi-file uses references WITHOUT a set-name prefix
- * (e.g. {brColors.primary.s6}), and resolves them by token path alone.
+ * (e.g. {brand.primary.700}), and resolves them by token path alone.
  * Style Dictionary works on a single flat tree, so we need to (a) nest
  * each set under its name and (b) prefix every reference with the
  * **owning** set's name so Style Dictionary can resolve cross-set refs.

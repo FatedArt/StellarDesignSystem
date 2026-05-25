@@ -2,125 +2,125 @@
   "color": {
     "action": {
       "primary": {
-        "value": "{brColors.primary.s6}",
+        "value": "{brand.primary.700}",
         "type": "color"
       },
       "primaryHover": {
-        "value": "{brColors.primary.s7}",
+        "value": "{brand.primary.800}",
         "type": "color"
       },
       "primarySubtle": {
-        "value": "{brColors.primary.s0}",
+        "value": "{brand.primary.100}",
         "type": "color"
       },
       "primaryStrong": {
-        "value": "{brColors.primary.s5}",
+        "value": "{brand.primary.600}",
         "type": "color"
       },
       "secondary": {
-        "value": "{dfColors.onyx.s0}",
+        "value": "{neutral.light.100}",
         "type": "color"
       },
       "secondaryHover": {
-        "value": "{dfColors.onyx.s1}",
+        "value": "{neutral.light.200}",
         "type": "color"
       },
       "danger": {
-        "value": "{brColors.secondary.s5}",
+        "value": "{brand.secondary.600}",
         "type": "color"
       },
       "dangerHover": {
-        "value": "{brColors.secondary.s6}",
+        "value": "{brand.secondary.700}",
         "type": "color"
       },
       "dangerSubtle": {
-        "value": "{brColors.secondary.s0}",
+        "value": "{brand.secondary.100}",
         "type": "color"
       },
       "dangerStrong": {
-        "value": "{brColors.secondary.s4}",
+        "value": "{brand.secondary.500}",
         "type": "color"
       }
     },
     "text": {
       "onPrimary": {
-        "value": "{dfColors.onyx.s1}",
+        "value": "{neutral.light.200}",
         "type": "color"
       },
       "primary": {
-        "value": "{brColors.primary.s6}",
+        "value": "{brand.primary.700}",
         "type": "color"
       },
       "tertiary": {
-        "value": "{brColors.primary.s5}",
+        "value": "{brand.primary.600}",
         "type": "color"
       },
       "base": {
-        "value": "{dfColors.onyx.s7}",
+        "value": "{neutral.light.800}",
         "type": "color"
       },
       "muted": {
-        "value": "{dfColors.onyx.s4}",
+        "value": "{neutral.light.500}",
         "type": "color"
       },
       "subtle": {
-        "value": "{dfColors.onyx.s3}",
+        "value": "{neutral.light.400}",
         "type": "color"
       },
       "onSurface": {
-        "value": "{dfColors.onyx.s0}",
+        "value": "{neutral.light.100}",
         "type": "color"
       },
       "disabled": {
-        "value": "{dfColors.onyx.s5}",
+        "value": "{neutral.light.600}",
         "type": "color"
       }
     },
     "background": {
       "default": {
-        "value": "{dfColors.onyx.s0}",
+        "value": "{neutral.light.100}",
         "type": "color"
       },
       "subtle": {
-        "value": "{dfColors.dark.s5}",
+        "value": "{neutral.dark.600}",
         "type": "color"
       },
       "strong": {
-        "value": "{dfColors.dark.s6}",
+        "value": "{neutral.dark.700}",
         "type": "color"
       },
       "surface": {
-        "value": "{dfColors.dark.s8}",
+        "value": "{neutral.dark.900}",
         "type": "color"
       },
       "elevated": {
-        "value": "{dfColors.dark.s7}",
+        "value": "{neutral.dark.800}",
         "type": "color"
       },
       "inverse": {
-        "value": "{dfColors.dark.s9}",
+        "value": "{neutral.dark.1000}",
         "type": "color"
       }
     },
     "border": {
       "default": {
-        "value": "{dfColors.dark.s4}",
+        "value": "{neutral.dark.500}",
         "type": "color"
       },
       "subtle": {
-        "value": "{dfColors.dark.s5}",
+        "value": "{neutral.dark.600}",
         "type": "color"
       },
       "focus": {
-        "value": "{brColors.primary.s5}",
+        "value": "{brand.primary.600}",
         "type": "color"
       },
       "error": {
-        "value": "{brColors.secondary.s5}",
+        "value": "{brand.secondary.600}",
         "type": "color"
       },
       "errorFocus": {
-        "value": "{brColors.secondary.s6}",
+        "value": "{brand.secondary.700}",
         "type": "color"
       }
     },
