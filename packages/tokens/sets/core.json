@@ -1,43 +1,45 @@
 {
-  "2": {
-    "value": "2",
-    "type": "number"
-  },
-  "4": {
-    "value": "4",
-    "type": "number"
-  },
-  "6": {
-    "value": "6",
-    "type": "number"
-  },
-  "8": {
-    "value": "8",
-    "type": "number"
-  },
-  "10": {
-    "value": "10",
-    "type": "number"
-  },
-  "12": {
-    "value": "12",
-    "type": "number"
-  },
-  "14": {
-    "value": "14",
-    "type": "number"
-  },
-  "16": {
-    "value": "16",
-    "type": "number"
-  },
-  "18": {
-    "value": "18",
-    "type": "number"
-  },
-  "20": {
-    "value": "20",
-    "type": "number"
+  "multiplier": {
+    "2": {
+      "value": "2",
+      "type": "number"
+    },
+    "4": {
+      "value": "4",
+      "type": "number"
+    },
+    "6": {
+      "value": "6",
+      "type": "number"
+    },
+    "8": {
+      "value": "8",
+      "type": "number"
+    },
+    "10": {
+      "value": "10",
+      "type": "number"
+    },
+    "12": {
+      "value": "12",
+      "type": "number"
+    },
+    "14": {
+      "value": "14",
+      "type": "number"
+    },
+    "16": {
+      "value": "16",
+      "type": "number"
+    },
+    "18": {
+      "value": "18",
+      "type": "number"
+    },
+    "20": {
+      "value": "20",
+      "type": "number"
+    }
   },
   "sizes": {
     "default-2px": {
@@ -445,35 +447,35 @@
       "type": "spacing"
     },
     "xs": {
-      "value": "calc({core.spacing.xxs} * {core.2})",
+      "value": "calc({core.spacing.xxs} * {core.multiplier.2})",
       "type": "spacing"
     },
     "sm": {
-      "value": "calc({core.spacing.xxs} * {core.4})",
+      "value": "calc({core.spacing.xxs} * {core.multiplier.4})",
       "type": "spacing"
     },
     "md": {
-      "value": "calc({core.spacing.xxs} * {core.6})",
+      "value": "calc({core.spacing.xxs} * {core.multiplier.6})",
       "type": "spacing"
     },
     "lg": {
-      "value": "calc({core.spacing.xxs} * {core.8})",
+      "value": "calc({core.spacing.xxs} * {core.multiplier.8})",
       "type": "spacing"
     },
     "xl": {
-      "value": "calc({core.spacing.xxs} * {core.10})",
+      "value": "calc({core.spacing.xxs} * {core.multiplier.10})",
       "type": "spacing"
     },
     "2xl": {
-      "value": "calc({core.spacing.xxs} * {core.12})",
+      "value": "calc({core.spacing.xxs} * {core.multiplier.12})",
       "type": "spacing"
     },
     "3xl": {
-      "value": "calc({core.spacing.xxs} * {core.16})",
+      "value": "calc({core.spacing.xxs} * {core.multiplier.16})",
       "type": "spacing"
     },
     "4xl": {
-      "value": "calc({core.spacing.xxs} * {core.20})",
+      "value": "calc({core.spacing.xxs} * {core.multiplier.20})",
       "type": "spacing"
     }
   },
@@ -483,19 +485,19 @@
       "type": "borderRadius"
     },
     "xs": {
-      "value": "calc({core.radius.xxs} * {core.2})",
+      "value": "calc({core.radius.xxs} * {core.multiplier.2})",
       "type": "borderRadius"
     },
     "sm": {
-      "value": "calc({core.radius.xxs} * {core.4})",
+      "value": "calc({core.radius.xxs} * {core.multiplier.4})",
       "type": "borderRadius"
     },
     "md": {
-      "value": "calc({core.radius.xxs} * {core.6})",
+      "value": "calc({core.radius.xxs} * {core.multiplier.6})",
       "type": "borderRadius"
     },
     "lg": {
-      "value": "calc({core.radius.xxs} * {core.8})",
+      "value": "calc({core.radius.xxs} * {core.multiplier.8})",
       "type": "borderRadius"
     },
     "xl": {
