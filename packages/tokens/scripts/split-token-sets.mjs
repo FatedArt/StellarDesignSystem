@@ -14,7 +14,7 @@ import { dirname, join } from "node:path";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, "..");
-const tokensPath = join(root, "tokens.json");
+const tokensPath = join(root, "single", "tokens.json");
 const setsDir = join(root, "sets");
 
 const tokens = JSON.parse(readFileSync(tokensPath, "utf8"));

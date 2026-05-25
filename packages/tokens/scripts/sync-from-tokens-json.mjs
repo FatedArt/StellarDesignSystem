@@ -15,10 +15,10 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const scriptsDir = dirname(fileURLToPath(import.meta.url));
-const tokensPath = join(scriptsDir, "..", "tokens.json");
+const tokensPath = join(scriptsDir, "..", "single", "tokens.json");
 
 if (!existsSync(tokensPath)) {
-  console.error("Missing packages/tokens/tokens.json — pull from Git or run pnpm merge first.");
+  console.error("Missing packages/tokens/single/tokens.json — pull from Git or run pnpm merge first.");
   process.exit(1);
 }
 
@@ -32,4 +32,4 @@ function run(scriptName) {
 run("split-token-sets.mjs");
 run("fix-cross-set-refs.mjs");
 
-console.log("Synced tokens.json → sets/ (ready for review & build)");
+console.log("Synced single/tokens.json → sets/ (ready for review & build)");

@@ -26,7 +26,7 @@ const lineHeightPxTransform = {
 };
 
 export default {
-  source: ["tokens.json"],
+  source: ["single/tokens.json"],
   expand: {
     include: ["typography"],
   },

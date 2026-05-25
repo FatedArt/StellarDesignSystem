@@ -8,14 +8,14 @@ alwaysApply: false
 
 ## Intinya
 
-- **`tokens.json`** = source design (sync Figma, single-file, **di-commit**)
+- **`single/tokens.json`** = source design (sync Figma, single-file, **di-commit**)
 - **`sets/`** = derived multi-file (generate via `sync:split` setelah pull)
-- Referensi di **`sets/`** tanpa prefix set; di **`tokens.json`** dengan prefix set (untuk Style Dictionary)
+- Referensi di **`sets/`** tanpa prefix set; di **`single/tokens.json`** dengan prefix set (untuk Style Dictionary)
 
 ## Workflow Free tier
 
 ```
-Figma push → tokens.json → git pull → sync:split → sets/ → build
+Figma push → single/tokens.json → git pull → sync:split → sets/ → build
 ```
 
 ```bash
@@ -36,8 +36,8 @@ pnpm --filter @fatedart/tokens build
 
 ## Aturan edit
 
-1. **Desain:** edit di Figma → push `tokens.json` → pull → `sync:split`
-2. **Engineer (jarang):** edit `sets/` → `sync:merge` → commit `tokens.json` → pull di Figma
+1. **Desain:** edit di Figma → push `single/tokens.json` → pull → `sync:split`
+2. **Engineer (jarang):** edit `sets/` → `sync:merge` → commit `single/tokens.json` → pull di Figma
 3. Jangan edit `sets/` manual tanpa sync balik ke `tokens.json`
 
 ## Gejala alias rusak

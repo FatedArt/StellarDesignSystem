@@ -9,7 +9,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const scriptsDir = dirname(fileURLToPath(import.meta.url));
-const tokensPath = join(scriptsDir, "..", "tokens.json");
+const tokensPath = join(scriptsDir, "..", "single", "tokens.json");
 
 function run(scriptName) {
   const result = spawnSync("node", [join(scriptsDir, scriptName)], {
@@ -19,8 +19,8 @@ function run(scriptName) {
 }
 
 if (existsSync(tokensPath)) {
-  console.log("Using existing tokens.json for Style Dictionary build");
+  console.log("Using existing single/tokens.json for Style Dictionary build");
 } else {
-  console.log("tokens.json not found — merging from sets/");
+  console.log("single/tokens.json not found — merging from sets/");
   run("merge-token-sets.mjs");
 }

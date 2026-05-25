@@ -11,12 +11,12 @@ description: >-
 
 ## Workflow (Tokens Studio Free)
 
-**Source of truth:** `packages/tokens/tokens.json` (single-file, synced from Figma)
+**Source of truth:** `packages/tokens/single/tokens.json` (single-file, synced from Figma)
 
 **Derived:** `packages/tokens/sets/` (multi-file, for review & structure)
 
 ```
-Figma push → tokens.json → git pull → sync:split → sets/ → build → dist/
+Figma push → single/tokens.json → git pull → sync:split → sets/ → build → dist/
 ```
 
 ### After git pull (Figma changed tokens)
@@ -31,7 +31,7 @@ pnpm --filter @fatedart/tokens build
 | Setting | Value |
 |---------|-------|
 | Storage | **File** (not folder — folder needs Pro) |
-| Path | `packages/tokens/tokens.json` |
+| Path | `packages/tokens/single/tokens.json` |
 | Branch | `development` |
 
 ## Reference format
@@ -44,7 +44,7 @@ pnpm --filter @fatedart/tokens build
 "value": "{crv.body-medium.small}"
 ```
 
-**`tokens.json`** — with set prefix (Style Dictionary):
+**`single/tokens.json`** — with set prefix (Style Dictionary):
 
 ```json
 "value": "{core.spacing.sm}"
@@ -52,14 +52,14 @@ pnpm --filter @fatedart/tokens build
 "value": "{typography.crv.body-medium.small}"
 ```
 
-`sync:split` strips prefixes when generating `sets/`. `sync:merge` re-adds them to `tokens.json`.
+`sync:split` strips prefixes when generating `sets/`. `sync:merge` re-adds them to `single/tokens.json`.
 
 ## Scripts
 
 | Command | When |
 |---------|------|
-| `sync:split` | After pull — `tokens.json` → `sets/` + normalize refs |
-| `sync:merge` | After editing `sets/` — `sets/` → `tokens.json` |
+| `sync:split` | After pull — `single/tokens.json` → `sets/` + normalize refs |
+| `sync:merge` | After editing `sets/` — `sets/` → `single/tokens.json` |
 | `build` | Style Dictionary → `dist/` |
 | `fix-cross-set-refs.mjs` | Manual ref normalization in `sets/` |
 
