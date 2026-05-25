@@ -41,7 +41,7 @@
           "type": "borderRadius"
         },
         "typography": {
-          "value": "{crv.body-medium.xxsmall}",
+          "value": "{body-medium.xxsmall}",
           "type": "typography"
         }
       },
@@ -63,7 +63,7 @@
           "type": "borderRadius"
         },
         "typography": {
-          "value": "{crv.body-medium.xxsmall}",
+          "value": "{body-medium.xxsmall}",
           "type": "typography"
         }
       },
@@ -85,7 +85,7 @@
           "type": "borderRadius"
         },
         "typography": {
-          "value": "{crv.body-medium.small}",
+          "value": "{body-medium.small}",
           "type": "typography"
         }
       },
@@ -107,7 +107,7 @@
           "type": "borderRadius"
         },
         "typography": {
-          "value": "{crv.body-semibold.medium}",
+          "value": "{body-semibold.medium}",
           "type": "typography"
         }
       },
@@ -129,7 +129,7 @@
           "type": "borderRadius"
         },
         "typography": {
-          "value": "{crv.body-semibold.xlarge}",
+          "value": "{body-semibold.xlarge}",
           "type": "typography"
         }
       }
@@ -303,7 +303,7 @@
           "type": "spacing"
         },
         "typography": {
-          "value": "{crv.body-regular.xxsmall}",
+          "value": "{body-regular.xxsmall}",
           "type": "typography"
         }
       },
@@ -321,7 +321,7 @@
           "type": "spacing"
         },
         "typography": {
-          "value": "{crv.body-regular.small}",
+          "value": "{body-regular.small}",
           "type": "typography"
         }
       },
@@ -339,7 +339,7 @@
           "type": "dimension"
         },
         "typography": {
-          "value": "{crv.body-regular.medium}",
+          "value": "{body-regular.medium}",
           "type": "typography"
         }
       }
@@ -407,11 +407,11 @@
       }
     },
     "labelTypography": {
-      "value": "{crv.body-medium.small}",
+      "value": "{body-medium.small}",
       "type": "typography"
     },
     "helperTypography": {
-      "value": "{crv.body-regular.xxsmall}",
+      "value": "{body-regular.xxsmall}",
       "type": "typography"
     }
   },
@@ -518,23 +518,23 @@
         "type": "dimension"
       },
       "logoTypography": {
-        "value": "{crv.uppercase.large}",
+        "value": "{uppercase.large}",
         "type": "typography"
       },
       "logoCompactTypography": {
-        "value": "{crv.uppercase.small}",
+        "value": "{uppercase.small}",
         "type": "typography"
       },
       "searchTypography": {
-        "value": "{crv.body-regular.small}",
+        "value": "{body-regular.small}",
         "type": "typography"
       },
       "accountNameTypography": {
-        "value": "{crv.body-semibold.small}",
+        "value": "{body-semibold.small}",
         "type": "typography"
       },
       "accountRoleTypography": {
-        "value": "{crv.body-regular.xxsmall}",
+        "value": "{body-regular.xxsmall}",
         "type": "typography"
       },
       "accountRoleColor": {
@@ -576,7 +576,7 @@
         "type": "color"
       },
       "typography": {
-        "value": "{crv.body-regular.small}",
+        "value": "{body-regular.small}",
         "type": "typography"
       }
     },
@@ -650,11 +650,11 @@
         "type": "color"
       },
       "searchTypography": {
-        "value": "{crv.body-regular.xxsmall}",
+        "value": "{body-regular.xxsmall}",
         "type": "typography"
       },
       "footerTypography": {
-        "value": "{crv.body-regular.small}",
+        "value": "{body-regular.small}",
         "type": "typography"
       }
     }

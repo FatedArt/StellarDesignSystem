@@ -47,15 +47,15 @@
       "type": "spacing"
     }
   },
-  "body": {
+  "fontBody": {
     "value": "DM Sans",
     "type": "fontFamilies"
   },
-  "display": {
+  "fontDisplay": {
     "value": "Nunito Sans",
     "type": "fontFamilies"
   },
-  "headline": {
+  "fontHeadline": {
     "value": "Nunito Sans",
     "type": "fontFamilies"
   },
