@@ -6,9 +6,9 @@ Design tokens adalah satu sumber kebenaran untuk semua nilai desain (warna, spac
 
 ```
 Figma (Tokens Studio plugin)
-  ↓ sync
-packages/tokens/tokens.json (Git)
-  ↓ Style Dictionary build
+  ↓ sync (folder: packages/tokens/sets)
+packages/tokens/sets/*.json (Git)
+  ↓ merge + Style Dictionary build
 packages/tokens/dist/tokens.css
 packages/tokens/dist/tokens.js
   ↓ import
@@ -30,14 +30,20 @@ Komponen React + halaman produk
 core → semantic → typography → components
 ```
 
-## Token sets aktif
+## Token sets aktif (sidebar Token Studio)
 
-| Set | Isi |
-|---|---|
-| `core` | Spacing, radius, warna primitif, font scale (dulu `crv`) |
-| `semantic` | Warna aksi, teks, background, border |
-| `typography` | Composite text styles (dulu `Typhography`) |
-| `components` | Token Button, InputField, HeaderFooter |
+Setelah Pull dari GitHub, sidebar harus menampilkan **4 set flat**:
+
+```
+core → semantic → typography → components
+```
+
+| Set | File | Isi |
+|---|---|---|
+| `core` | `sets/core.json` | Spacing, radius, warna primitif, font scale |
+| `semantic` | `sets/semantic.json` | Warna aksi, teks, background, border |
+| `typography` | `sets/typography.json` | Composite text styles |
+| `components` | `sets/components.json` | Token Button, InputField, HeaderFooter |
 
 ## Pakai di CSS
 
@@ -53,6 +59,6 @@ padding: var(--stellar-components-button-size-md-padding-y)
 ## Update token dari Figma
 
 1. Buka **Tokens Studio** di Figma
-2. Sync ke GitHub → buat PR
+2. Sync ke folder `packages/tokens/sets` di GitHub → buat PR
 3. Review oleh design lead + engineer
 4. Merge → CI otomatis build → CSS/JS ter-update

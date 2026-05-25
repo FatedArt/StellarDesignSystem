@@ -5,7 +5,7 @@ on:
     branches: [main]
     paths:
       - "apps/docs/**"
-      - "packages/tokens/tokens.json"
+      - "packages/tokens/sets/**"
 
 jobs:
   deploy:

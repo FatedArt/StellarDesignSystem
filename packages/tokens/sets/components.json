@@ -1,0 +1,662 @@
+{
+  "button": {
+    "radius": {
+      "value": "{core.radius.sm}",
+      "type": "borderRadius"
+    },
+    "radiusLg": {
+      "value": "{core.radius.md}",
+      "type": "borderRadius"
+    },
+    "gap": {
+      "value": "{core.spacing.xs}",
+      "type": "spacing"
+    },
+    "gapLg": {
+      "value": "{core.spacing.sm}",
+      "type": "spacing"
+    },
+    "opacity": {
+      "disabled": {
+        "value": "{semantic.opacity.disabled}",
+        "type": "number"
+      }
+    },
+    "size": {
+      "xs": {
+        "paddingX": {
+          "value": "{core.spacing.sm}",
+          "type": "spacing"
+        },
+        "paddingY": {
+          "value": "{core.spacing.xs}",
+          "type": "spacing"
+        },
+        "gap": {
+          "value": "{core.spacing.xs}",
+          "type": "spacing"
+        },
+        "radius": {
+          "value": "{components.button.radius}",
+          "type": "borderRadius"
+        },
+        "typography": {
+          "value": "{typography.crv.body-medium.xxsmall}",
+          "type": "typography"
+        }
+      },
+      "sm": {
+        "paddingX": {
+          "value": "{core.spacing.md}",
+          "type": "spacing"
+        },
+        "paddingY": {
+          "value": "{core.spacing.sm}",
+          "type": "spacing"
+        },
+        "gap": {
+          "value": "{core.spacing.xs}",
+          "type": "spacing"
+        },
+        "radius": {
+          "value": "{components.button.radius}",
+          "type": "borderRadius"
+        },
+        "typography": {
+          "value": "{typography.crv.body-medium.xxsmall}",
+          "type": "typography"
+        }
+      },
+      "md": {
+        "paddingX": {
+          "value": "{core.spacing.lg}",
+          "type": "spacing"
+        },
+        "paddingY": {
+          "value": "{core.spacing.md}",
+          "type": "spacing"
+        },
+        "gap": {
+          "value": "{core.spacing.xs}",
+          "type": "spacing"
+        },
+        "radius": {
+          "value": "{components.button.radius}",
+          "type": "borderRadius"
+        },
+        "typography": {
+          "value": "{typography.crv.body-medium.small}",
+          "type": "typography"
+        }
+      },
+      "lg": {
+        "paddingX": {
+          "value": "{core.spacing.xl}",
+          "type": "spacing"
+        },
+        "paddingY": {
+          "value": "{core.spacing.md}",
+          "type": "spacing"
+        },
+        "gap": {
+          "value": "{components.button.gapLg}",
+          "type": "spacing"
+        },
+        "radius": {
+          "value": "{components.button.radiusLg}",
+          "type": "borderRadius"
+        },
+        "typography": {
+          "value": "{typography.crv.body-semibold.medium}",
+          "type": "typography"
+        }
+      },
+      "xl": {
+        "paddingX": {
+          "value": "{core.spacing.2xl}",
+          "type": "spacing"
+        },
+        "paddingY": {
+          "value": "{core.spacing.md}",
+          "type": "spacing"
+        },
+        "gap": {
+          "value": "{components.button.gapLg}",
+          "type": "spacing"
+        },
+        "radius": {
+          "value": "{components.button.radiusLg}",
+          "type": "borderRadius"
+        },
+        "typography": {
+          "value": "{typography.crv.body-semibold.xlarge}",
+          "type": "typography"
+        }
+      }
+    },
+    "variant": {
+      "primary": {
+        "background": {
+          "default": {
+            "value": "{semantic.color.action.primary}",
+            "type": "color"
+          },
+          "hover": {
+            "value": "{semantic.color.action.primaryHover}",
+            "type": "color"
+          }
+        },
+        "color": {
+          "default": {
+            "value": "{semantic.color.text.onPrimary}",
+            "type": "color"
+          },
+          "hover": {
+            "value": "{semantic.color.text.onPrimary}",
+            "type": "color"
+          }
+        }
+      },
+      "secondary": {
+        "background": {
+          "default": {
+            "value": "{semantic.color.action.secondary}",
+            "type": "color"
+          },
+          "hover": {
+            "value": "{semantic.color.action.secondaryHover}",
+            "type": "color"
+          }
+        },
+        "color": {
+          "default": {
+            "value": "{semantic.color.action.primary}",
+            "type": "color"
+          },
+          "hover": {
+            "value": "{semantic.color.action.primaryHover}",
+            "type": "color"
+          }
+        }
+      },
+      "outline": {
+        "background": {
+          "default": {
+            "value": "transparent",
+            "type": "color"
+          },
+          "hover": {
+            "value": "{semantic.color.action.primary}",
+            "type": "color"
+          }
+        },
+        "border": {
+          "default": {
+            "value": "{semantic.color.action.primaryStrong}",
+            "type": "color"
+          }
+        },
+        "color": {
+          "default": {
+            "value": "{semantic.color.action.primaryStrong}",
+            "type": "color"
+          },
+          "hover": {
+            "value": "{semantic.color.action.primarySubtle}",
+            "type": "color"
+          }
+        }
+      },
+      "tonal": {
+        "background": {
+          "default": {
+            "value": "{semantic.color.background.subtle}",
+            "type": "color"
+          },
+          "hover": {
+            "value": "{semantic.color.background.strong}",
+            "type": "color"
+          }
+        },
+        "color": {
+          "default": {
+            "value": "{semantic.color.text.onPrimary}",
+            "type": "color"
+          },
+          "hover": {
+            "value": "{semantic.color.action.primaryStrong}",
+            "type": "color"
+          }
+        }
+      },
+      "text": {
+        "background": {
+          "default": {
+            "value": "transparent",
+            "type": "color"
+          },
+          "hover": {
+            "value": "{semantic.color.background.strong}",
+            "type": "color"
+          }
+        },
+        "color": {
+          "default": {
+            "value": "{semantic.color.text.onPrimary}",
+            "type": "color"
+          },
+          "hover": {
+            "value": "{semantic.color.action.primary}",
+            "type": "color"
+          }
+        }
+      },
+      "destruction": {
+        "background": {
+          "default": {
+            "value": "{semantic.color.action.danger}",
+            "type": "color"
+          },
+          "hover": {
+            "value": "{semantic.color.action.dangerHover}",
+            "type": "color"
+          }
+        },
+        "color": {
+          "default": {
+            "value": "{semantic.color.text.subtle}",
+            "type": "color"
+          },
+          "hover": {
+            "value": "{semantic.color.action.dangerSubtle}",
+            "type": "color"
+          }
+        }
+      }
+    }
+  },
+  "inputField": {
+    "gap": {
+      "value": "{core.spacing.xs}",
+      "type": "spacing"
+    },
+    "radius": {
+      "value": "{core.radius.sm}",
+      "type": "borderRadius"
+    },
+    "focusRing": {
+      "value": "2px",
+      "type": "dimension"
+    },
+    "size": {
+      "sm": {
+        "minHeight": {
+          "value": "36px",
+          "type": "dimension"
+        },
+        "paddingX": {
+          "value": "{core.spacing.md}",
+          "type": "spacing"
+        },
+        "paddingY": {
+          "value": "{core.spacing.sm}",
+          "type": "spacing"
+        },
+        "typography": {
+          "value": "{typography.crv.body-regular.xxsmall}",
+          "type": "typography"
+        }
+      },
+      "md": {
+        "minHeight": {
+          "value": "45px",
+          "type": "dimension"
+        },
+        "paddingX": {
+          "value": "{core.spacing.lg}",
+          "type": "spacing"
+        },
+        "paddingY": {
+          "value": "{core.spacing.md}",
+          "type": "spacing"
+        },
+        "typography": {
+          "value": "{typography.crv.body-regular.small}",
+          "type": "typography"
+        }
+      },
+      "lg": {
+        "minHeight": {
+          "value": "52px",
+          "type": "dimension"
+        },
+        "paddingX": {
+          "value": "{core.spacing.lg}",
+          "type": "spacing"
+        },
+        "paddingY": {
+          "value": "14px",
+          "type": "dimension"
+        },
+        "typography": {
+          "value": "{typography.crv.body-regular.medium}",
+          "type": "typography"
+        }
+      }
+    },
+    "color": {
+      "label": {
+        "value": "{semantic.color.text.onPrimary}",
+        "type": "color"
+      },
+      "required": {
+        "value": "{semantic.color.action.danger}",
+        "type": "color"
+      },
+      "border": {
+        "default": {
+          "value": "{semantic.color.border.default}",
+          "type": "color"
+        },
+        "focus": {
+          "value": "{semantic.color.border.focus}",
+          "type": "color"
+        },
+        "error": {
+          "value": "{semantic.color.border.error}",
+          "type": "color"
+        }
+      },
+      "background": {
+        "default": {
+          "value": "{semantic.color.background.surface}",
+          "type": "color"
+        },
+        "disabled": {
+          "value": "{semantic.color.background.elevated}",
+          "type": "color"
+        }
+      },
+      "text": {
+        "default": {
+          "value": "{semantic.color.text.onSurface}",
+          "type": "color"
+        },
+        "placeholder": {
+          "value": "{semantic.color.text.muted}",
+          "type": "color"
+        },
+        "disabled": {
+          "value": "{semantic.color.text.disabled}",
+          "type": "color"
+        }
+      },
+      "helper": {
+        "default": {
+          "value": "{semantic.color.text.subtle}",
+          "type": "color"
+        },
+        "error": {
+          "value": "{semantic.color.action.dangerStrong}",
+          "type": "color"
+        }
+      },
+      "affix": {
+        "value": "{semantic.color.text.muted}",
+        "type": "color"
+      }
+    },
+    "labelTypography": {
+      "value": "{typography.crv.body-medium.small}",
+      "type": "typography"
+    },
+    "helperTypography": {
+      "value": "{typography.crv.body-regular.xxsmall}",
+      "type": "typography"
+    }
+  },
+  "headerFooter": {
+    "header": {
+      "minHeight": {
+        "value": "61px",
+        "type": "dimension"
+      },
+      "paddingX": {
+        "value": "{core.spacing.2xl}",
+        "type": "spacing"
+      },
+      "paddingY": {
+        "value": "{core.spacing.sm}",
+        "type": "spacing"
+      },
+      "gap": {
+        "value": "{core.spacing.lg}",
+        "type": "spacing"
+      },
+      "contentGap": {
+        "value": "{core.spacing.xl}",
+        "type": "spacing"
+      },
+      "border": {
+        "value": "{semantic.color.border.default}",
+        "type": "color"
+      },
+      "background": {
+        "value": "{semantic.color.background.surface}",
+        "type": "color"
+      },
+      "color": {
+        "value": "{semantic.color.text.onSurface}",
+        "type": "color"
+      },
+      "searchWidth": {
+        "value": "240px",
+        "type": "dimension"
+      },
+      "searchHeight": {
+        "value": "45px",
+        "type": "dimension"
+      },
+      "searchRadius": {
+        "value": "{core.radius.sm}",
+        "type": "borderRadius"
+      },
+      "searchPaddingX": {
+        "value": "{core.spacing.lg}",
+        "type": "spacing"
+      },
+      "searchPaddingY": {
+        "value": "{core.spacing.md}",
+        "type": "spacing"
+      },
+      "searchBorder": {
+        "value": "{semantic.color.border.default}",
+        "type": "color"
+      },
+      "searchBackground": {
+        "value": "{core.dfColors.dark.3}",
+        "type": "color"
+      },
+      "searchColor": {
+        "value": "{semantic.color.text.muted}",
+        "type": "color"
+      },
+      "iconSize": {
+        "value": "32px",
+        "type": "dimension"
+      },
+      "iconRadius": {
+        "value": "{core.radius.sm}",
+        "type": "borderRadius"
+      },
+      "iconBorder": {
+        "value": "{semantic.color.border.default}",
+        "type": "color"
+      },
+      "iconBackground": {
+        "value": "{core.dfColors.dark.3}",
+        "type": "color"
+      },
+      "iconColor": {
+        "value": "{semantic.color.text.onSurface}",
+        "type": "color"
+      },
+      "dividerHeight": {
+        "value": "28px",
+        "type": "dimension"
+      },
+      "dividerColor": {
+        "value": "{semantic.color.border.default}",
+        "type": "color"
+      },
+      "accountGap": {
+        "value": "{core.spacing.md}",
+        "type": "spacing"
+      },
+      "avatarSize": {
+        "value": "32px",
+        "type": "dimension"
+      },
+      "logoTypography": {
+        "value": "{typography.crv.uppercase.large}",
+        "type": "typography"
+      },
+      "logoCompactTypography": {
+        "value": "{typography.crv.uppercase.small}",
+        "type": "typography"
+      },
+      "searchTypography": {
+        "value": "{typography.crv.body-regular.small}",
+        "type": "typography"
+      },
+      "accountNameTypography": {
+        "value": "{typography.crv.body-semibold.small}",
+        "type": "typography"
+      },
+      "accountRoleTypography": {
+        "value": "{typography.crv.body-regular.xxsmall}",
+        "type": "typography"
+      },
+      "accountRoleColor": {
+        "value": "{semantic.color.text.subtle}",
+        "type": "color"
+      }
+    },
+    "footer": {
+      "minHeight": {
+        "value": "59px",
+        "type": "dimension"
+      },
+      "paddingX": {
+        "value": "{core.spacing.2xl}",
+        "type": "spacing"
+      },
+      "paddingTop": {
+        "value": "{core.spacing.md}",
+        "type": "spacing"
+      },
+      "paddingBottom": {
+        "value": "{core.spacing.md}",
+        "type": "spacing"
+      },
+      "gap": {
+        "value": "23px",
+        "type": "dimension"
+      },
+      "border": {
+        "value": "{semantic.color.border.default}",
+        "type": "color"
+      },
+      "background": {
+        "value": "{semantic.color.background.surface}",
+        "type": "color"
+      },
+      "color": {
+        "value": "{semantic.color.text.onSurface}",
+        "type": "color"
+      },
+      "typography": {
+        "value": "{typography.crv.body-regular.small}",
+        "type": "typography"
+      }
+    },
+    "mobile": {
+      "width": {
+        "value": "320px",
+        "type": "dimension"
+      },
+      "headerTopMinHeight": {
+        "value": "55px",
+        "type": "dimension"
+      },
+      "actionBarMinHeight": {
+        "value": "52px",
+        "type": "dimension"
+      },
+      "footerMinHeight": {
+        "value": "190px",
+        "type": "dimension"
+      },
+      "padding": {
+        "value": "{core.spacing.md}",
+        "type": "spacing"
+      },
+      "footerPadding": {
+        "value": "{core.spacing.3xl}",
+        "type": "spacing"
+      },
+      "footerGap": {
+        "value": "{core.spacing.3xl}",
+        "type": "spacing"
+      },
+      "footerContentGap": {
+        "value": "{core.spacing.lg}",
+        "type": "spacing"
+      },
+      "searchWidth": {
+        "value": "192px",
+        "type": "dimension"
+      },
+      "searchHeight": {
+        "value": "32px",
+        "type": "dimension"
+      },
+      "searchPaddingX": {
+        "value": "{core.spacing.md}",
+        "type": "spacing"
+      },
+      "searchPaddingY": {
+        "value": "{core.spacing.sm}",
+        "type": "spacing"
+      },
+      "actionGap": {
+        "value": "{core.spacing.sm}",
+        "type": "spacing"
+      },
+      "border": {
+        "value": "{semantic.color.border.subtle}",
+        "type": "color"
+      },
+      "background": {
+        "value": "{semantic.color.background.surface}",
+        "type": "color"
+      },
+      "footerBackground": {
+        "value": "{semantic.color.background.inverse}",
+        "type": "color"
+      },
+      "color": {
+        "value": "{semantic.color.text.onSurface}",
+        "type": "color"
+      },
+      "searchTypography": {
+        "value": "{typography.crv.body-regular.xxsmall}",
+        "type": "typography"
+      },
+      "footerTypography": {
+        "value": "{typography.crv.body-regular.small}",
+        "type": "typography"
+      }
+    }
+  }
+}

@@ -7,13 +7,13 @@ on:
       - "packages/ui/src/**"
       - "packages/icons/src/**"
       - "apps/storybook/**"
-      - "packages/tokens/tokens.json"
+      - "packages/tokens/sets/**"
   pull_request:
     paths:
       - "packages/ui/src/**"
       - "packages/icons/src/**"
       - "apps/storybook/**"
-      - "packages/tokens/tokens.json"
+      - "packages/tokens/sets/**"
 
 jobs:
   deploy:

@@ -9,9 +9,12 @@
     "access": "restricted"
   },
   "scripts": {
+    "prebuild": "node scripts/merge-token-sets.mjs",
     "build": "style-dictionary build --config sd.config.mjs",
-    "dev": "style-dictionary build --config sd.config.mjs --watch",
-    "clean": "rm -rf dist"
+    "dev": "node scripts/merge-token-sets.mjs && style-dictionary build --config sd.config.mjs --watch",
+    "split": "node scripts/split-token-sets.mjs",
+    "merge": "node scripts/merge-token-sets.mjs",
+    "clean": "rm -rf dist tokens.json"
   },
   "devDependencies": {
     "style-dictionary": "^4.0.0"

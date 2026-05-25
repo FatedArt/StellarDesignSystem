@@ -25,7 +25,7 @@ Panduan berkontribusi ke Stellar Design System.
 ### Menambah token baru
 
 1. Definisikan di Tokens Studio plugin Figma
-2. Sync ke `packages/tokens/tokens.json`
+2. Sync ke folder `packages/tokens/sets` di GitHub
 3. Buat PR dengan deskripsi: tujuan token + komponen yang akan pakai
 
 ## Naming convention
