@@ -10,7 +10,7 @@
   },
   "scripts": {
     "prebuild": "node scripts/merge-token-sets.mjs",
-    "build": "style-dictionary build --config sd.config.mjs",
+    "build": "style-dictionary build --config sd.config.mjs && node scripts/wrap-calc-css.mjs",
     "dev": "node scripts/merge-token-sets.mjs && style-dictionary build --config sd.config.mjs --watch",
     "split": "node scripts/split-token-sets.mjs",
     "merge": "node scripts/merge-token-sets.mjs",

@@ -1,6 +1,6 @@
 # Spacing
 
-Skala spacing Stellar menggunakan basis **2px grid** (`core.sizes.default-2px`):
+Skala spacing Stellar menggunakan basis **2px grid** (`core.sizes.unit2`):
 
 | Token | Nilai |
 |---|---|

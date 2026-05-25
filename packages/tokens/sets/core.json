@@ -42,7 +42,7 @@
     }
   },
   "sizes": {
-    "default-2px": {
+    "unit2": {
       "value": "0.125rem",
       "type": "dimension"
     }
@@ -443,61 +443,61 @@
   },
   "spacing": {
     "xxs": {
-      "value": "{core.sizes.default-2px}",
+      "value": "{core.sizes.unit2}",
       "type": "spacing"
     },
     "xs": {
-      "value": "calc({core.spacing.xxs} * {core.multiplier.2})",
+      "value": "{core.spacing.xxs} * {core.multiplier.2}",
       "type": "spacing"
     },
     "sm": {
-      "value": "calc({core.spacing.xxs} * {core.multiplier.4})",
+      "value": "{core.spacing.xxs} * {core.multiplier.4}",
       "type": "spacing"
     },
     "md": {
-      "value": "calc({core.spacing.xxs} * {core.multiplier.6})",
+      "value": "{core.spacing.xxs} * {core.multiplier.6}",
       "type": "spacing"
     },
     "lg": {
-      "value": "calc({core.spacing.xxs} * {core.multiplier.8})",
+      "value": "{core.spacing.xxs} * {core.multiplier.8}",
       "type": "spacing"
     },
     "xl": {
-      "value": "calc({core.spacing.xxs} * {core.multiplier.10})",
+      "value": "{core.spacing.xxs} * {core.multiplier.10}",
       "type": "spacing"
     },
     "2xl": {
-      "value": "calc({core.spacing.xxs} * {core.multiplier.12})",
+      "value": "{core.spacing.xxs} * {core.multiplier.12}",
       "type": "spacing"
     },
     "3xl": {
-      "value": "calc({core.spacing.xxs} * {core.multiplier.16})",
+      "value": "{core.spacing.xxs} * {core.multiplier.16}",
       "type": "spacing"
     },
     "4xl": {
-      "value": "calc({core.spacing.xxs} * {core.multiplier.20})",
+      "value": "{core.spacing.xxs} * {core.multiplier.20}",
       "type": "spacing"
     }
   },
   "radius": {
     "xxs": {
-      "value": "{core.sizes.default-2px}",
+      "value": "{core.sizes.unit2}",
       "type": "borderRadius"
     },
     "xs": {
-      "value": "calc({core.radius.xxs} * {core.multiplier.2})",
+      "value": "{core.radius.xxs} * {core.multiplier.2}",
       "type": "borderRadius"
     },
     "sm": {
-      "value": "calc({core.radius.xxs} * {core.multiplier.4})",
+      "value": "{core.radius.xxs} * {core.multiplier.4}",
       "type": "borderRadius"
     },
     "md": {
-      "value": "calc({core.radius.xxs} * {core.multiplier.6})",
+      "value": "{core.radius.xxs} * {core.multiplier.6}",
       "type": "borderRadius"
     },
     "lg": {
-      "value": "calc({core.radius.xxs} * {core.multiplier.8})",
+      "value": "{core.radius.xxs} * {core.multiplier.8}",
       "type": "borderRadius"
     },
     "xl": {
@@ -507,27 +507,27 @@
   },
   "fontSizes": {
     "bodys-10": {
-      "value": "calc({core.sizes.default-2px} * 5)",
+      "value": "{core.sizes.unit2} * 5",
       "type": "fontSizes"
     },
     "bodys-12": {
-      "value": "calc({core.fontSizes.bodys-10} * 1.2)",
+      "value": "{core.fontSizes.bodys-10} * 1.2",
       "type": "fontSizes"
     },
     "bodys-14": {
-      "value": "calc({core.fontSizes.bodys-10} * 1.4)",
+      "value": "{core.fontSizes.bodys-10} * 1.4",
       "type": "fontSizes"
     },
     "bodys-16": {
-      "value": "calc({core.fontSizes.bodys-10} * 1.6)",
+      "value": "{core.fontSizes.bodys-10} * 1.6",
       "type": "fontSizes"
     },
     "bodys-18": {
-      "value": "calc({core.fontSizes.bodys-10} * 1.8)",
+      "value": "{core.fontSizes.bodys-10} * 1.8",
       "type": "fontSizes"
     },
     "bodys-20": {
-      "value": "calc({core.fontSizes.bodys-10} * 2)",
+      "value": "{core.fontSizes.bodys-10} * 2",
       "type": "fontSizes"
     },
     "headings": {

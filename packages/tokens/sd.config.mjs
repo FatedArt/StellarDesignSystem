@@ -8,10 +8,11 @@ const calcMultiplyTransform = {
   type: "value",
   transitive: true,
   filter: (token) =>
-    typeof token.value === "string" &&
-    token.value.includes("*") &&
-    !token.value.startsWith("calc("),
-  transform: (token) => `calc(${token.value})`,
+    typeof token.value === "string" && token.value.includes("*"),
+  transform: (token) => {
+    const value = token.value.trim();
+    return value.startsWith("calc(") ? value : `calc(${value})`;
+  },
 };
 
 const lineHeightPxTransform = {

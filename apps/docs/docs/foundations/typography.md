@@ -22,7 +22,7 @@ Style Dictionary mengekspansi token typography menjadi variabel per properti:
 ```css
 font-family: var(--stellar-typography-crv-body-regular-small-font-family);
 font-weight: var(--stellar-typography-crv-body-regular-small-font-weight);
-font-size: calc(var(--stellar-core-sizes-default-2px) * 7);
+font-size: calc(var(--stellar-core-sizes-unit2) * 7);
 line-height: calc(var(--stellar-typography-crv-body-regular-small-line-height) * 1px);
 letter-spacing: var(--stellar-typography-crv-body-regular-small-letter-spacing);
 ```
