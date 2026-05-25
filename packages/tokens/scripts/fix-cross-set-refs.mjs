@@ -1,15 +1,20 @@
 /**
- * Fix Token Studio reference resolution:
+ * Normalize Token Studio multi-file references so they render without "red dots":
  * 1. Rename numeric color scale keys (0-9) → s0-s9 in core
- * 2. Strip same-set prefixes in semantic/components
- * 3. Update cross-set color references
+ * 2. Strip ALL set-name prefixes ({core.*, semantic.*, typography.*, components.*})
+ *    from references in every set. Token Studio resolves cross-set refs by path
+ *    alone; the merge step re-adds `{setName.path}` prefixes for Style Dictionary.
+ * 3. Update legacy numeric color refs to the s0-s9 form.
  */
 
-import { readFileSync, writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync, readdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..", "sets");
+
+const SET_NAMES = ["core", "semantic", "typography", "components"];
+const STRIP_PREFIX_RE = new RegExp(`\\{(${SET_NAMES.join("|")})\\.`, "g");
 
 function renameColorScaleKeys(obj) {
   if (!obj || typeof obj !== "object" || Array.isArray(obj)) return obj;
@@ -24,15 +29,15 @@ function renameColorScaleKeys(obj) {
   return next;
 }
 
-function stripSetPrefix(value, setName) {
+function stripAllSetPrefixes(value) {
   if (typeof value === "string") {
-    return value.replace(new RegExp(`\\{${setName}\\.`, "g"), "{");
+    return value.replace(STRIP_PREFIX_RE, "{");
   }
-  if (Array.isArray(value)) return value.map((v) => stripSetPrefix(v, setName));
+  if (Array.isArray(value)) return value.map(stripAllSetPrefixes);
   if (value && typeof value === "object") {
     const next = {};
     for (const [key, entry] of Object.entries(value)) {
-      next[key] = stripSetPrefix(entry, setName);
+      next[key] = stripAllSetPrefixes(entry);
     }
     return next;
   }
@@ -63,13 +68,18 @@ core.brColors = renameColorScaleKeys(core.brColors);
 core.dfColors = renameColorScaleKeys(core.dfColors);
 writeFileSync(corePath, `${JSON.stringify(core, null, 2)}\n`);
 
-for (const file of ["semantic.json", "components.json"]) {
+const setFiles = readdirSync(root).filter(
+  (file) => file.endsWith(".json") && !file.startsWith("$"),
+);
+
+for (const file of setFiles) {
   const path = join(root, file);
   let data = JSON.parse(readFileSync(path, "utf8"));
-  const setName = file.replace(".json", "");
-  data = stripSetPrefix(data, setName);
+  data = stripAllSetPrefixes(data);
   data = updateColorRefs(data);
   writeFileSync(path, `${JSON.stringify(data, null, 2)}\n`);
 }
 
-console.log("Fixed color scale keys (s0-s9) and same-set references in semantic/components");
+console.log(
+  `Normalized refs in ${setFiles.join(", ")} (stripped set prefixes, fixed s0-s9 keys)`,
+);

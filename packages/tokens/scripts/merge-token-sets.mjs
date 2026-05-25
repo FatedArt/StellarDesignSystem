@@ -1,9 +1,16 @@
 /**
  * Merge sets/*.json → tokens.json (for Style Dictionary build).
+ *
+ * Token Studio multi-file uses references WITHOUT a set-name prefix
+ * (e.g. {brColors.primary.s6}), and resolves them by token path alone.
+ * Style Dictionary works on a single flat tree, so we need to (a) nest
+ * each set under its name and (b) prefix every reference with the
+ * **owning** set's name so Style Dictionary can resolve cross-set refs.
+ *
  * Run: node scripts/merge-token-sets.mjs
  */
 
-import { readFileSync, writeFileSync, readdirSync } from "node:fs";
+import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
@@ -16,21 +23,40 @@ const metadata = JSON.parse(readFileSync(join(setsDir, "$metadata.json"), "utf8"
 const themes = JSON.parse(readFileSync(join(setsDir, "$themes.json"), "utf8"));
 const tokenSetOrder = metadata.tokenSetOrder ?? [];
 
-/** Token Studio multi-file uses set-relative refs; Style Dictionary needs `{setName.path}`. */
-function prefixSetRefs(value, setName) {
+const setData = {};
+for (const setName of tokenSetOrder) {
+  setData[setName] = JSON.parse(
+    readFileSync(join(setsDir, `${setName}.json`), "utf8"),
+  );
+}
+
+const SET_NAMES = new Set(tokenSetOrder);
+
+/** Map each top-level token group to the set that owns it. */
+const keyToSet = {};
+for (const setName of tokenSetOrder) {
+  for (const topKey of Object.keys(setData[setName])) {
+    if (!keyToSet[topKey]) keyToSet[topKey] = setName;
+  }
+}
+
+const REF_RE = /\{([^}]+)\}/g;
+
+function prefixRefs(value) {
   if (typeof value === "string") {
-    return value.replace(
-      /\{(?!core\.|semantic\.|typography\.|components\.)([\w.-]+)\./g,
-      `{${setName}.$1.`,
-    );
+    return value.replace(REF_RE, (match, refBody) => {
+      const firstSegment = refBody.split(".")[0];
+      if (SET_NAMES.has(firstSegment)) return match;
+      const owningSet = keyToSet[firstSegment];
+      if (!owningSet) return match;
+      return `{${owningSet}.${refBody}}`;
+    });
   }
-  if (Array.isArray(value)) {
-    return value.map((item) => prefixSetRefs(item, setName));
-  }
+  if (Array.isArray(value)) return value.map(prefixRefs);
   if (value && typeof value === "object") {
     const next = {};
     for (const [key, entry] of Object.entries(value)) {
-      next[key] = prefixSetRefs(entry, setName);
+      next[key] = prefixRefs(entry);
     }
     return next;
   }
@@ -39,8 +65,7 @@ function prefixSetRefs(value, setName) {
 
 const merged = {};
 for (const setName of tokenSetOrder) {
-  const setTokens = JSON.parse(readFileSync(join(setsDir, `${setName}.json`), "utf8"));
-  merged[setName] = prefixSetRefs(setTokens, setName);
+  merged[setName] = prefixRefs(setData[setName]);
 }
 
 merged.$themes = themes;
