@@ -37,7 +37,7 @@
           "type": "spacing"
         },
         "radius": {
-          "value": "{components.button.radius}",
+          "value": "{button.radius}",
           "type": "borderRadius"
         },
         "typography": {
@@ -59,7 +59,7 @@
           "type": "spacing"
         },
         "radius": {
-          "value": "{components.button.radius}",
+          "value": "{button.radius}",
           "type": "borderRadius"
         },
         "typography": {
@@ -81,7 +81,7 @@
           "type": "spacing"
         },
         "radius": {
-          "value": "{components.button.radius}",
+          "value": "{button.radius}",
           "type": "borderRadius"
         },
         "typography": {
@@ -99,11 +99,11 @@
           "type": "spacing"
         },
         "gap": {
-          "value": "{components.button.gapLg}",
+          "value": "{button.gapLg}",
           "type": "spacing"
         },
         "radius": {
-          "value": "{components.button.radiusLg}",
+          "value": "{button.radiusLg}",
           "type": "borderRadius"
         },
         "typography": {
@@ -121,11 +121,11 @@
           "type": "spacing"
         },
         "gap": {
-          "value": "{components.button.gapLg}",
+          "value": "{button.gapLg}",
           "type": "spacing"
         },
         "radius": {
-          "value": "{components.button.radiusLg}",
+          "value": "{button.radiusLg}",
           "type": "borderRadius"
         },
         "typography": {
@@ -474,7 +474,7 @@
         "type": "color"
       },
       "searchBackground": {
-        "value": "{core.dfColors.dark.3}",
+        "value": "{core.dfColors.dark.s3}",
         "type": "color"
       },
       "searchColor": {
@@ -494,7 +494,7 @@
         "type": "color"
       },
       "iconBackground": {
-        "value": "{core.dfColors.dark.3}",
+        "value": "{core.dfColors.dark.s3}",
         "type": "color"
       },
       "iconColor": {

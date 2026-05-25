@@ -2,139 +2,139 @@
   "color": {
     "action": {
       "primary": {
-        "value": "{core.brColors.primary.6}",
+        "value": "{core.brColors.primary.s6}",
         "type": "color"
       },
       "primaryHover": {
-        "value": "{core.brColors.primary.7}",
+        "value": "{core.brColors.primary.s7}",
         "type": "color"
       },
       "primarySubtle": {
-        "value": "{core.brColors.primary.0}",
+        "value": "{core.brColors.primary.s0}",
         "type": "color"
       },
       "primaryStrong": {
-        "value": "{core.brColors.primary.5}",
+        "value": "{core.brColors.primary.s5}",
         "type": "color"
       },
       "secondary": {
-        "value": "{core.dfColors.onyx.0}",
+        "value": "{core.dfColors.onyx.s0}",
         "type": "color"
       },
       "secondaryHover": {
-        "value": "{core.dfColors.onyx.1}",
+        "value": "{core.dfColors.onyx.s1}",
         "type": "color"
       },
       "danger": {
-        "value": "{core.brColors.secondary.5}",
+        "value": "{core.brColors.secondary.s5}",
         "type": "color"
       },
       "dangerHover": {
-        "value": "{core.brColors.secondary.6}",
+        "value": "{core.brColors.secondary.s6}",
         "type": "color"
       },
       "dangerSubtle": {
-        "value": "{core.brColors.secondary.0}",
+        "value": "{core.brColors.secondary.s0}",
         "type": "color"
       },
       "dangerStrong": {
-        "value": "{core.brColors.secondary.4}",
+        "value": "{core.brColors.secondary.s4}",
         "type": "color"
       }
     },
     "text": {
       "onPrimary": {
-        "value": "{core.dfColors.onyx.1}",
+        "value": "{core.dfColors.onyx.s1}",
         "type": "color"
       },
       "primary": {
-        "value": "{core.brColors.primary.6}",
+        "value": "{core.brColors.primary.s6}",
         "type": "color"
       },
       "tertiary": {
-        "value": "{core.brColors.primary.5}",
+        "value": "{core.brColors.primary.s5}",
         "type": "color"
       },
       "base": {
-        "value": "{core.dfColors.onyx.7}",
+        "value": "{core.dfColors.onyx.s7}",
         "type": "color"
       },
       "muted": {
-        "value": "{core.dfColors.onyx.4}",
+        "value": "{core.dfColors.onyx.s4}",
         "type": "color"
       },
       "subtle": {
-        "value": "{core.dfColors.onyx.3}",
+        "value": "{core.dfColors.onyx.s3}",
         "type": "color"
       },
       "onSurface": {
-        "value": "{core.dfColors.onyx.0}",
+        "value": "{core.dfColors.onyx.s0}",
         "type": "color"
       },
       "disabled": {
-        "value": "{core.dfColors.onyx.5}",
+        "value": "{core.dfColors.onyx.s5}",
         "type": "color"
       }
     },
     "background": {
       "default": {
-        "value": "{core.dfColors.onyx.0}",
+        "value": "{core.dfColors.onyx.s0}",
         "type": "color"
       },
       "subtle": {
-        "value": "{core.dfColors.dark.5}",
+        "value": "{core.dfColors.dark.s5}",
         "type": "color"
       },
       "strong": {
-        "value": "{core.dfColors.dark.6}",
+        "value": "{core.dfColors.dark.s6}",
         "type": "color"
       },
       "surface": {
-        "value": "{core.dfColors.dark.8}",
+        "value": "{core.dfColors.dark.s8}",
         "type": "color"
       },
       "elevated": {
-        "value": "{core.dfColors.dark.7}",
+        "value": "{core.dfColors.dark.s7}",
         "type": "color"
       },
       "inverse": {
-        "value": "{core.dfColors.dark.9}",
+        "value": "{core.dfColors.dark.s9}",
         "type": "color"
       }
     },
     "border": {
       "default": {
-        "value": "{core.dfColors.dark.4}",
+        "value": "{core.dfColors.dark.s4}",
         "type": "color"
       },
       "subtle": {
-        "value": "{core.dfColors.dark.5}",
+        "value": "{core.dfColors.dark.s5}",
         "type": "color"
       },
       "focus": {
-        "value": "{core.brColors.primary.5}",
+        "value": "{core.brColors.primary.s5}",
         "type": "color"
       },
       "error": {
-        "value": "{core.brColors.secondary.5}",
+        "value": "{core.brColors.secondary.s5}",
         "type": "color"
       },
       "errorFocus": {
-        "value": "{core.brColors.secondary.6}",
+        "value": "{core.brColors.secondary.s6}",
         "type": "color"
       }
     },
     "icon": {
       "primary": {
-        "value": "{semantic.color.action.primary}",
+        "value": "{color.action.primary}",
         "type": "color"
       },
       "onPrimary": {
-        "value": "{semantic.color.text.onPrimary}",
+        "value": "{color.text.onPrimary}",
         "type": "color"
       },
       "muted": {
-        "value": "{semantic.color.text.muted}",
+        "value": "{color.text.muted}",
         "type": "color"
       }
     }

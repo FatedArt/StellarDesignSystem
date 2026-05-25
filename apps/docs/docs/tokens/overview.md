@@ -19,7 +19,7 @@ Komponen React + halaman produk
 
 | Tier | Set | Contoh | Keterangan |
 |---|---|---|---|
-| Core | `core` | `core.brColors.primary.6` | Nilai mentah — jangan dipakai langsung di komponen |
+| Core | `core` | `core.brColors.primary.s6` | Nilai mentah — jangan dipakai langsung di komponen |
 | Semantik | `semantic` | `semantic.color.action.primary` | Makna UI — dipakai lintas komponen |
 | Typography | `typography` | `typography.crv.body-medium.small` | Style teks siap pakai |
 | Komponen | `components` | `components.button.variant.primary.background.default` | Spesifik per komponen |
