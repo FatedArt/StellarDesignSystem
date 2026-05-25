@@ -2,7 +2,7 @@
   "tokenSetOrder": [
     "core",
     "semantic",
-    "crv",
+    "typography",
     "components"
   ]
 }

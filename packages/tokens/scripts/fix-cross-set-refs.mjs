@@ -13,7 +13,7 @@ import { fileURLToPath } from "node:url";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..", "sets");
 
-const SET_NAMES = ["core", "semantic", "crv", "components"];
+const SET_NAMES = ["core", "semantic", "typography", "components"];
 const STRIP_PREFIX_RE = new RegExp(`\\{(${SET_NAMES.join("|")})\\.`, "g");
 
 function renameColorScaleKeys(obj) {
