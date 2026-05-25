@@ -1,0 +1,45 @@
+---
+description: Konvensi referensi token Token Studio multi-file (tanpa prefix set di sets/)
+globs: packages/tokens/**
+alwaysApply: false
+---
+
+# Token Studio — Referensi & Workflow
+
+## Intinya
+
+- **`tokens.json`** = source design (sync Figma, single-file, **di-commit**)
+- **`sets/`** = derived multi-file (generate via `sync:split` setelah pull)
+- Referensi di **`sets/`** tanpa prefix set; di **`tokens.json`** dengan prefix set (untuk Style Dictionary)
+
+## Workflow Free tier
+
+```
+Figma push → tokens.json → git pull → sync:split → sets/ → build
+```
+
+```bash
+pnpm --filter @fatedart/tokens sync:split
+pnpm --filter @fatedart/tokens build
+```
+
+## Format referensi di `sets/`
+
+| Konteks | Salah | Benar |
+|---------|-------|-------|
+| Cross-set ke core | `{core.spacing.sm}` | `{spacing.sm}` |
+| Cross-set ke semantic | `{semantic.color.action.primary}` | `{color.action.primary}` |
+| Cross-set ke typography | `{typography.crv.body-medium.small}` | `{crv.body-medium.small}` |
+| Same-set | `{components.button.radius}` | `{button.radius}` |
+
+`sync:split` otomatis menormalisasi prefix setelah split.
+
+## Aturan edit
+
+1. **Desain:** edit di Figma → push `tokens.json` → pull → `sync:split`
+2. **Engineer (jarang):** edit `sets/` → `sync:merge` → commit `tokens.json` → pull di Figma
+3. Jangan edit `sets/` manual tanpa sync balik ke `tokens.json`
+
+## Gejala alias rusak
+
+Titik merah di Token Studio = prefix set tersisa di `sets/`. Jalankan `sync:split` atau `fix-cross-set-refs.mjs`.

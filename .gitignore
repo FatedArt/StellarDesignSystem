@@ -6,7 +6,6 @@ build/
 .docusaurus/
 storybook-static/
 apps/storybook/build-storybook.log
-packages/tokens/tokens.json
 
 *.local
 .env

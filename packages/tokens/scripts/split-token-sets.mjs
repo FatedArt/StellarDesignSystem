@@ -1,6 +1,11 @@
 /**
- * Split monolithic tokens.json → multi-file Token Studio folder layout.
- * Run: node scripts/split-token-sets.mjs
+ * Split single-file tokens.json → multi-file sets/ layout.
+ *
+ * Prefer the combined workflow after a Figma sync pull:
+ *   pnpm --filter @fatedart/tokens sync:split
+ * That also normalizes refs (strip set prefixes) via fix-cross-set-refs.mjs.
+ *
+ * Run alone: node scripts/split-token-sets.mjs
  */
 
 import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync } from "node:fs";
