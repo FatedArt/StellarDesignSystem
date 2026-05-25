@@ -1,0 +1,53 @@
+---
+description: Wajib tampilkan ringkasan perubahan dan minta konfirmasi eksplisit sebelum git push
+alwaysApply: true
+---
+
+# Git Push — Wajib Konfirmasi
+
+## Aturan
+
+**JANGAN PERNAH** menjalankan `git push` secara otomatis dalam satu chain command.
+
+Setiap kali akan push, agent wajib:
+
+1. **Commit dulu** (boleh otomatis jika user minta)
+2. **Tampilkan ringkasan** — file yang berubah + jumlah +/- baris
+3. **Tanya konfirmasi eksplisit** sebelum push
+
+## Format ringkasan wajib
+
+Setelah commit, tampilkan:
+
+```
+Commit: <hash> — <pesan commit>
+Branch: <branch> → origin/<branch>
+
+Perubahan:
+  path/to/file.ts   +12 -3
+  path/to/other.ts  +5
+
+Push sekarang? (ya / tidak)
+```
+
+Tunggu jawaban "ya" / "push" / konfirmasi serupa dari user baru jalankan `git push`.
+
+## Contoh yang salah
+
+```bash
+# ❌ Jangan lakukan ini dalam satu rangkaian
+git add . && git commit -m "..." && git push origin development
+```
+
+## Contoh yang benar
+
+```bash
+# Step 1 — commit
+git add . && git commit -m "..."
+
+# Step 2 — tampilkan ringkasan + tanya
+# "Commit berhasil. Mau dipush ke origin/development?"
+
+# Step 3 — tunggu konfirmasi, baru:
+git push origin development
+```
